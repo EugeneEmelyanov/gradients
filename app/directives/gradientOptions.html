@@ -1,7 +1,20 @@
-<div>
+<div class="gradient_options">
   <gradients.panel panel-title="Gradient Options">
-    <input type="radio" name="gradientType" value="linear" checked>Linear</input>
-    <input type="radio" name="gradientType" value="Radial">Radial</input>
+
+    <section class="gradient_selector">
+      <span class="label">Gradient Style:</span>
+      <div class="button_group">
+        <input type="radio" name="gradientType" value="linear" checked ng-model="gradientType">Linear</input>
+        <input type="radio" name="gradientType" value="radial" ng-model="gradientType">Radial</input>
+      </div>
+    </section>
+
+    <section ng-show="gradientType == 'linear'">
+      asdf
+    </section>
+    <section ng-show="gradientType == 'radial'">
+      Radial gradient box
+    </section>
   </gradients.panel>
 </div>
 

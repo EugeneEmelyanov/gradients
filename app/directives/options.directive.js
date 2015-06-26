@@ -9,6 +9,12 @@
       return {
         restrict: "E",
         replace: true,
+        scope: {
+          gradientType: "=gradientType"
+        },
+        controller: function($scope) {
+          $scope.gradientType = "linear";
+        },
         templateUrl: "/directives/gradientOptions.html"
       }
   });
