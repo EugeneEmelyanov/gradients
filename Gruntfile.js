@@ -43,7 +43,7 @@ module.exports = function (grunt) {
         }
       },
       stylus: {
-        files: ['<%= yeoman.app %>/styles/main.styl'],
+        files: ['<%= yeoman.app %>/styles/main.styl', '<%= yeoman.app %>/styles/gradients.styl'],
         tasks: ['stylus']
       },
       gruntfile: {
