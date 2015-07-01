@@ -10,9 +10,16 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <!-- build:css(.tmp) styles/main.css -->
+      <link rel="stylesheet" href="styles/main.css">
+      <!-- endbuild -->
   </head>
   <body ng-app="gradientsApp">
     <!--[if lt IE 7]>
@@ -51,8 +58,11 @@
         <script src="directives/directives.js"></script>
         <script src="directives/footer.directive.js"></script>
         <script src="directives/header.directive.js"></script>
-        <script src="directives/options.directive.js"></script>
+        <script src="directives/gradient.options.directive.js"></script>
         <script src="directives/panel.directive.js"></script>
+        <script src="directives/gradients.preview.directive.js"></script>
+        <script src="directives/gradients.stops.directive.js"></script>
+        <script src="directives/buttonbar.directive.js"></script>
         <!-- endbuild -->
 </body>
 </html>

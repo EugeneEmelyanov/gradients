@@ -1,0 +1,7 @@
+<div class="btn-group" role="group">
+    <button ng-repeat="item in ::dataprovider"
+            value="{{::item}}"
+            type="button"
+            ng-class="{'active': $index == 0, 'btn btn-default':true}"
+            ng-click="itemClicked($index)">{{::item}}</button>
+</div>

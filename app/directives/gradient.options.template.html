@@ -1,0 +1,24 @@
+<gradients.panel panel-title="Gradient Options">
+    <section class="gradient_selector">
+      <span class="label">Gradient Style:</span>
+      <div class="button_group">
+        <input type="radio" name="gradientType" value="linear" checked ng-model="gradientType">Linear</input>
+        <input type="radio" name="gradientType" value="radial" ng-model="gradientType">Radial</input>
+      </div>
+    </section>
+
+    <section ng-show="gradientType == 'linear'">
+      <gradients.buttonbar selected-item-change="linearGradientTypeChanged(item)"
+              dataprovider="['to bottom right', 'to bottom', 'to bottom left', 'to right', 'to left', 'to top right', 'to top', 'to top left']"></gradients.buttonbar>
+    </section>
+    <section ng-show="gradientType == 'radial'">
+      <label>Gradients Position</label>
+        <gradients.buttonbar select-item-change="radialGradientPositionChange(item)"
+                             dataprovider="['top left', 'top center', 'top right', 'middle left', 'middle center', 'middle right', 'bottom left', 'bottom center', 'bottom right']"></gradients.buttonbar>
+      <label>Sizes</label>
+        <gradients.buttonbar select-item-change="radialGradientSizeChange(item)"
+                             dataprovider="['closest-side', 'closest-corner', 'farthest-side', 'farthest-corner']"></gradients.buttonbar>
+    </section>
+</gradients.panel>
+
+
