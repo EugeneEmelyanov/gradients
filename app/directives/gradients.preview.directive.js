@@ -7,6 +7,7 @@
     app.directive('gradients.preview', function() {
         return {
             templateUrl: "/directives/gradient.preview.template.html",
+            controller: "gradients.GradientsCtrl",
             restrict: "E"
         }
     })

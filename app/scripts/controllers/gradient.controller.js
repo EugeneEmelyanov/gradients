@@ -5,10 +5,12 @@
 
   var app = angular.module('gradientsApp');
 
-  app.controller('gradients.GradientsCtrl', function($scope) {
-        $scope.linearGradientTypeChanged = function() {
-            alert("asdf");
-        }
+  app.controller('gradients.GradientsCtrl', function($scope, Constants) {
+        $scope.gradient = {};
+        $scope.gradient.gradientStyle = Constants.gradientStyles[0];
+        $scope.gradient.linearGradientDirection = Constants.linearGradientDirections[0];
+        $scope.gradient.radialGradientPosition = Constants.radialGradientPositions[0];
+        $scope.gradient.radialGradientSize = Constants.radialGradientSizes[0]
   });
 
 })();

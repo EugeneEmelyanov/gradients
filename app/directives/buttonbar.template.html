@@ -1,5 +1,5 @@
 <div class="btn-group" role="group">
-    <button ng-repeat="item in ::dataprovider"
+    <button ng-repeat="item in ::items track by $index"
             value="{{::item}}"
             type="button"
             ng-class="{'active': $index == 0, 'btn btn-default':true}"
