@@ -24,6 +24,9 @@
   padding: 4px 0 20px 0;
   margin: 0 -3px;
 }
+.preview__canvas {
+  height: 250px;
+}
 
 body {
   background: #fff;
