@@ -27,6 +27,10 @@
 .preview__canvas {
   height: 250px;
 }
+.gradient_stops .left_column {
+  float: left;
+  display: inline-block;
+}
 
 body {
   background: #fff;
