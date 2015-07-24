@@ -8,18 +8,7 @@
   app.directive("gradients.options", function(Constants) {
       return {
         restrict: "E",
-        scope: {
-            gradient: "=gradient"
-        },
         controller: function($scope) {
-
-
-            $scope.model = {};
-            $scope.model.gradientStyles = Constants.gradientStyles;
-            $scope.model.linearGradientDirections = Constants.linearGradientDirections;
-            $scope.model.radialGradientPositions = Constants.radialGradientPositions;
-            $scope.model.radialGradientSizes = Constants.radialGradientSizes;
-
             $scope.linearGradientTypeChanged = function(item) {
                 $scope.gradient.linearGradientDirection = item;
             }

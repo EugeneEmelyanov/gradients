@@ -1,0 +1,13 @@
+{
+    "radialGradientPositions": [
+        {"name": "top left", "value": "left top"},
+        {"name": "top center", "value": "center top"},
+        {"name": "top right", "value": "right top"},
+        {"name": "middle left", "value": "left center"},
+        {"name": "middle center", "value": "center"},
+        {"name": "middle right", "value": "right center"},
+        {"name": "bottom left", "value": "left bottom"},
+        {"name": "bottom center", "value": "center bottom"},
+        {"name": "bottom right", "value": "right bottom"}
+    ]
+}

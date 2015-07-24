@@ -2,22 +2,22 @@
     <section class="gradient_selector">
       <span class="label">Gradient Style:</span>
       <div class="button_group">
-        <input type="radio" name="gradientType" value="{{::model.gradientStyles[0]}}" ng-click="gradient.gradientStyle = model.gradientStyles[0]" checked>{{::model.gradientStyles[0]}}</input>
-        <input type="radio" name="gradientType" value="{{::model.gradientStyles[1]}}" ng-click="gradient.gradientStyle = model.gradientStyles[1]">{{::model.gradientStyles[1]}}</input>
+        <input type="radio" name="gradientType" value="{{::data.gradientStyles[0].name}}" ng-click="gradient.gradientStyle = data.gradientStyles[0].name" checked>{{::data.gradientStyles[0].name}}</input>
+        <input type="radio" name="gradientType" value="{{::data.gradientStyles[1].name}}" ng-click="gradient.gradientStyle = data.gradientStyles[1].name">{{::data.gradientStyles[1].name}}</input>
       </div>
     </section>
 
-    <section ng-show="gradient.gradientStyle == model.gradientStyles[0]">
+    <section ng-show="gradient.gradientStyle == data.gradientStyles[0].name">
       <gradients.buttonbar selected-item-change="linearGradientTypeChanged"
-              dataprovider="{{::model.linearGradientDirections}}"></gradients.buttonbar>
+              dataprovider="{{::data.linearGradientDirections}}"></gradients.buttonbar>
     </section>
-    <section ng-show="gradient.gradientStyle == model.gradientStyles[1]">
+    <section ng-show="gradient.gradientStyle == data.gradientStyles[1].name">
       <label>Gradients Position</label>
         <gradients.buttonbar selected-item-change="radialGradientPositionChange"
-                             dataprovider="{{::model.radialGradientPositions}}"></gradients.buttonbar>
+                             dataprovider="{{::data.radialGradientPositions}}"></gradients.buttonbar>
       <label>Sizes</label>
         <gradients.buttonbar selected-item-change="radialGradientSizeChange"
-                             dataprovider="{{::model.radialGradientSizes}}"></gradients.buttonbar>
+                             dataprovider="{{::data.radialGradientSizes}}"></gradients.buttonbar>
     </section>
 </gradients.panel>
 

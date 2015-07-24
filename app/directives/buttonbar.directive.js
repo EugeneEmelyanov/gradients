@@ -21,7 +21,7 @@
                     $($('.btn', e)[scope.selectedItemIndex]).removeClass('active');
                     scope.selectedItemIndex = index;
                     $($('.btn', e)[index]).addClass('active');
-                    scope.selectedItemChange()( scope.items[index]);
+                    scope.selectedItemChange()( scope.items[index].name);
                 }
             }
         }

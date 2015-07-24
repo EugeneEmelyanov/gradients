@@ -1,7 +1,7 @@
 <div class="btn-group" role="group">
     <button ng-repeat="item in ::items track by $index"
-            value="{{::item}}"
+            value="{{::item.name}}"
             type="button"
             ng-class="{'active': $index == 0, 'btn btn-default':true}"
-            ng-click="itemClicked($index)">{{::item}}</button>
+            ng-click="itemClicked($index)">{{::item.name}}</button>
 </div>
