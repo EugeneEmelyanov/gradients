@@ -6,7 +6,7 @@
 
     module.factory("calculateStyles", function() {
 
-        var styleTemplate = "%1(%2, #FFFFFF 0%, #3366FF 100%)";
+        var styleTemplate = "%1(%2, %3)";
 
         function getObjectValueByName(name, collection) {
             if (typeof collection === "undefined" || collection == null) {
@@ -20,7 +20,7 @@
             return "";
         }
 
-        return function(gradientsObject, data) {
+        return function(gradientsObject, data, stops) {
             var style = gradientsObject.gradientStyle;
             var styleString = styleTemplate.concat("");
             switch(style) {
@@ -34,6 +34,12 @@
                                     getObjectValueByName(gradientsObject.radialGradientPosition, data.radialGradientPositions));
                 break;
             }
+            var str = stops.map(function(item) {
+              return item.color +" " + item.location + "%";
+            }).reduce(function(prValue, currentValue) {
+              return prValue + ", " + currentValue;
+            });
+            styleString = styleString.replace("%3", str);
             return {'background-image': styleString};
         }
     });

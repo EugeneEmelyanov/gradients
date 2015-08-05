@@ -1,40 +1,38 @@
 <gradients.panel class="gradient_stops" panel-title="Gradient Stops">
-    <div class="table_wrapper">
-        <div class="column sm">
-            <div class="row">
+    <div class="row gradient_stops__row">
+      <div class="col-md-2"></div>
+      <div class="col-md-5">
+        <span>Location:</span>
+      </div>
+      <div class="col-md-5">
+        <span>Color:</span>
+      </div>
+    </div>
+    <div class="row gradient_stops__row" ng-repeat="stop in gradientStops track by $index">
+      <div class="col-md-2">
+        {{$first ? "Start": ($last ? "End" : "Stop")}}
+      </div>
+      <div class="col-md-4">
+        <div class="input-group">
+          <input class="form-control" type="text" size="6" ng-model="stop.location">
+          <span class="input-group-addon">%</span>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5  form-inline">
+        <div class="form-group">
+          <div class="input-group"  color-picker="{{stop.color}}" data-index="{{$index}}">
+            <input id="colorStop" class="form-control" type="text" size="6" value="{{stop.color}}">
+            <span class="input-group-addon">%</span>
+          </div>
+        </div>
+        <a ng-if="!$last && !$first" href="" ng-click="removeStop(event, $index)" class="btn gradient_stops__icon">
+          <span class="glyphicon glyphicon-remove"></span>
+        </a>
+      </div>
+    </div>
 
-            </div>
-            <div class="row">
-                <span>Start:</span>
-            </div>
-            <div class="row">
-                <span>End:</span>
-            </div>
-        </div>
-        <div class="column">
-            <div class="row">
-                <span>Location:</span>
-            </div>
-            <div class="row input-group">
-                <input class="form-control" type="text" size="6" value="0">
-                <span class="input-group-addon">%</span>
-            </div>
-            <div class="row input-group">
-                <input class="form-control" type="text" size="6" value="0">
-                <span class="input-group-addon">%</span>
-            </div>
-        </div>
-        <div class="column clearfix">
-            <div class="row">
-                <span>Color:</span>
-            </div>
-            <div class="row">
-                <input class="input-lg">
-            </div>
-            <div class="row">
-                <input class="input-lg">
-            </div>
-        </div>
-        <a class="btn btn-primary" href="#">Add Stop</a>
+    <a class="btn btn-primary" href="" ng-click="addStop(event)">Add Stop</a>
+
     </div>
 </gradients.panel>

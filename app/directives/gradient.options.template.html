@@ -1,9 +1,12 @@
-<gradients.panel panel-title="Gradient Options">
+<gradients.panel panel-title="Gradient Options" class="gradient_options">
+  <div class="gradient_options__container">
     <section class="gradient_selector">
-      <span class="label">Gradient Style:</span>
+      <span>Gradient Style:</span>
       <div class="button_group">
-        <input type="radio" name="gradientType" value="{{::data.gradientStyles[0].name}}" ng-click="gradient.gradientStyle = data.gradientStyles[0].name" checked>{{::data.gradientStyles[0].name}}</input>
-        <input type="radio" name="gradientType" value="{{::data.gradientStyles[1].name}}" ng-click="gradient.gradientStyle = data.gradientStyles[1].name">{{::data.gradientStyles[1].name}}</input>
+        <input class="radio-inline" type="radio" name="gradientType" value="{{::data.gradientStyles[0].name}}" ng-click="gradient.gradientStyle = data.gradientStyles[0].name" checked>
+        <label class="radio_inline__label">{{::data.gradientStyles[0].name}}</label>
+        <input class="radio-inline" type="radio" name="gradientType" value="{{::data.gradientStyles[1].name}}" ng-click="gradient.gradientStyle = data.gradientStyles[1].name">
+        <label class="radio_inline__label">{{::data.gradientStyles[1].name}}</label>
       </div>
     </section>
 
@@ -19,6 +22,7 @@
         <gradients.buttonbar selected-item-change="radialGradientSizeChange"
                              dataprovider="{{::data.radialGradientSizes}}"></gradients.buttonbar>
     </section>
+  </div>
 </gradients.panel>
 
 

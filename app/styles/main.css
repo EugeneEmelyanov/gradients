@@ -1,68 +1,51 @@
-#gradients .panel {
-  border: 1px solid #444;
-  border-radius: 3px 3px 3px 3px;
-}
-#gradients .panel .panel-title {
-  color: #444;
-  background-color: #ccc;
-  border: 1px solid #444;
-  border-radius: 3px 0 3px 0;
-  padding: 2px 4px 2px 4px;
-  position: relative;
-  top: 2px;
-  border-top-style: none;
-  border-left-style: none;
-}
-#gradients .panel .content {
-  padding: 25px 10px 10px 10px;
-}
 #gradients .gradients__panel {
   width: 100%;
   display: inline-block;
 }
+.gradient_options {
+  font-size: 1.25em;
+}
+.gradient_options__container {
+  padding: 0 10px 0 10px;
+}
 .gradient_options .button_group {
-  padding: 4px 0 20px 0;
-  margin: 0 -3px;
+  padding: 4px 0 10px 0;
+}
+.gradient_options .button_group .radio_inline__label {
+  marging: 0 3px 0 3px;
 }
 .preview__canvas {
   height: 250px;
 }
+.preview .panel-title {
+  top: 1px;
+}
 .gradient_stops {
   font-size: 1.25em;
 }
-.gradient_stops .table_wrapper {
-  height: 12em;
-  padding: 0 10px 0 10px;
+.gradient_stops__icon {
+  width: auto;
+  padding-left: 0px;
 }
-.gradient_stops .input-lg {
-  height: 2em;
-  width: 10em;
+.gradient_stops__row {
+  padding-top: 3px;
 }
-.gradient_stops .column {
-  float: left;
-  width: 40%;
-  display: inline-block;
-}
-.gradient_stops .column:first-child {
-  padding-top: 0;
-}
-.gradient_stops .sm {
-  width: 20%;
-}
-.gradient_stops .row {
-  padding-top: 15px;
-  margin-right: 0;
-  margin-left: 0;
+.gradient_stops__row:last-of-type {
+  padding-bottom: 6px;
 }
 
 body {
   background: #fff;
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
   box-sizing: border-box;
+  font-size: 14px;
+}
+label {
+  font-weight: 400;
 }
 .footer .copyright {
   width: 100%;
-  background-color: #00b3ee;
+  ackground-color: #00b3ee;
 }
 .header .nav {
   height: 40px;
@@ -88,7 +71,13 @@ body {
   text-decoration: none;
   color: #ffa500;
 }
-.label {
-  color: #000;
-  font-size: 15;
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.button-group .flex-item {
+  flex: 0 1 23%;
+  margin: 3px;
+  white-space: normal;
 }
