@@ -24,7 +24,6 @@
                               component: "#colorStop"}).on("changeColor.colorpicker", function(event) {
                 var color = event.color.toHex();
                 scope.changeColorStop(attrs.index, color);
-              elem.colorpicker("hide");
             });
             attrs.$observe("colorPicker", function(value) {
               elem.colorpicker("setValue", value);

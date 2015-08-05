@@ -28,12 +28,17 @@
                 "gradient.linearGradientDirection",
                 "gradient.radialGradientPosition",
                 "gradient.radialGradientSize"], function() {
-                $scope.styleString = calculateStyles($scope.gradient, $scope.data, $scope.gradientStops);
+              validateString();
             });
 
             $scope.$watch("gradientStops", function(oldV, newV) {
-              $scope.styleString = calculateStyles($scope.gradient, $scope.data, $scope.gradientStops);
+              validateString();
             }, true);
+
+            function validateString() {
+              $scope.styleString = calculateStyles($scope.gradient, $scope.data, $scope.gradientStops);
+              $scope.$digest();
+            }
 
             $scope.addStop = function(event) {
               var gradStopLength = $scope.gradientStops.length;
@@ -49,6 +54,7 @@
 
             $scope.changeColorStop = function(index, color) {
               $scope.gradientStops[index].color = color;
+              validateString();
             }
 
             $scope.gradientStops = [{
