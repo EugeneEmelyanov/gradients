@@ -33,6 +33,10 @@
                     styleString = styleString.replace("%2", "ellipse " + getObjectValueByName(gradientsObject.radialGradientSize, data.radialGradientSizes) + " at " +
                                     getObjectValueByName(gradientsObject.radialGradientPosition, data.radialGradientPositions));
                 break;
+              default:
+              case data.gradientStyles[0].name:
+                styleString = styleString.replace("%1", data.gradientStyles[0].value);
+                styleString = styleString.replace("%2", data.linearGradientDirections[0].value);
             }
             var str = stops.map(function(item) {
               return item.color +" " + item.location + "%";

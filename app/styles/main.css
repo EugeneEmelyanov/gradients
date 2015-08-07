@@ -33,6 +33,21 @@
 .gradient_stops__row:last-of-type {
   padding-bottom: 6px;
 }
+.gradient-presets__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.gradient-presets__items {
+  flex: 0 1 15%;
+  margin: 3px;
+  white-space: normal;
+}
+.gradient-presets .preset {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px 0 5px;
+}
 
 body {
   background: #fff;
