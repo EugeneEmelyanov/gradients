@@ -85,10 +85,15 @@
               }},
             ];
 
-           for ( var i = 0; i < $scope.presetItems.length; i ++) {
-             var item = $scope.presetItems[i];
-             item.styleString = calculateStyles(item, $scope.data, item.gradient.stops);
-           }
+          $scope.setSelectedPreset = function(stops) {
+             $scope.gradientStops = stops;
+             $scope.$digest();
+          }
+
+           //for ( var i = 0; i < $scope.presetItems.length; i ++) {
+           //  var item = $scope.presetItems[i];
+           //  item.styleString = calculateStyles(item, $scope.data, item.gradient.stops);
+           //}
 
             $scope.gradientStops = [{
               location: 0,

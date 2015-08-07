@@ -47,6 +47,14 @@
   width: 40px;
   height: 40px;
   margin: 0 5px 0 5px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.gradient-presets .preset:hover {
+  border: 1px solid #808080;
+}
+.gradient-presets .preset:active {
+  border: 1px solid #000;
 }
 
 body {

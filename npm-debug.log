@@ -1,0 +1,431 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.11.3
+3 info using node@v0.10.33
+4 verbose readDependencies loading dependencies from /Users/eugene/Documents/projects/personal/gradients/package.json
+5 warn package.json gradients@0.0.0 No license field.
+6 verbose install where, deps [ '/Users/eugene/Documents/projects/personal/gradients',
+6 verbose install   [ 'fluidity',
+6 verbose install     'grunt',
+6 verbose install     'grunt-autoprefixer',
+6 verbose install     'grunt-concurrent',
+6 verbose install     'grunt-contrib-clean',
+6 verbose install     'grunt-contrib-concat',
+6 verbose install     'grunt-contrib-connect',
+6 verbose install     'grunt-contrib-copy',
+6 verbose install     'grunt-contrib-cssmin',
+6 verbose install     'grunt-contrib-htmlmin',
+6 verbose install     'grunt-contrib-imagemin',
+6 verbose install     'grunt-contrib-jshint',
+6 verbose install     'grunt-contrib-stylus',
+6 verbose install     'grunt-contrib-uglify',
+6 verbose install     'grunt-contrib-watch',
+6 verbose install     'grunt-filerev',
+6 verbose install     'grunt-google-cdn',
+6 verbose install     'grunt-newer',
+6 verbose install     'grunt-ng-annotate',
+6 verbose install     'grunt-svgmin',
+6 verbose install     'grunt-usemin',
+6 verbose install     'grunt-wiredep',
+6 verbose install     'jshint-stylish',
+6 verbose install     'karma-jasmine',
+6 verbose install     'karma-phantomjs-launcher',
+6 verbose install     'load-grunt-tasks',
+6 verbose install     'time-grunt' ] ]
+7 verbose install where, peers [ '/Users/eugene/Documents/projects/personal/gradients', [] ]
+8 verbose installManyTop reading for lifecycle /Users/eugene/Documents/projects/personal/gradients/package.json
+9 info preinstall gradients@0.0.0
+10 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/fluidity/package.json
+11 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt/package.json
+12 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-autoprefixer/package.json
+13 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-concurrent/package.json
+14 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-clean/package.json
+15 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-concat/package.json
+16 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-connect/package.json
+17 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-copy/package.json
+18 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-cssmin/package.json
+19 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-htmlmin/package.json
+20 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-imagemin/package.json
+21 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-jshint/package.json
+22 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-stylus/package.json
+23 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-uglify/package.json
+24 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-watch/package.json
+25 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-filerev/package.json
+26 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-google-cdn/package.json
+27 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-newer/package.json
+28 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-ng-annotate/package.json
+29 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-svgmin/package.json
+30 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-usemin/package.json
+31 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-wiredep/package.json
+32 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/jasmine-core/package.json
+33 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/jshint-stylish/package.json
+34 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/load-grunt-tasks/package.json
+35 verbose installManyTop reading scoped package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/time-grunt/package.json
+36 info package.json grunt-contrib-concat@0.5.1 No license field.
+37 info package.json grunt-contrib-clean@0.6.0 No license field.
+38 info package.json grunt-contrib-connect@0.9.0 No license field.
+39 info package.json grunt-contrib-copy@0.7.0 No license field.
+40 info package.json grunt-contrib-cssmin@0.12.3 No license field.
+41 info package.json grunt-contrib-htmlmin@0.4.0 No license field.
+42 info package.json grunt-contrib-jshint@0.11.2 No license field.
+43 info package.json grunt-contrib-stylus@0.21.0 No license field.
+44 info package.json grunt-contrib-watch@0.6.1 No license field.
+45 info package.json grunt-contrib-uglify@0.7.0 No license field.
+46 info package.json grunt-filerev@2.3.1 license should be a valid SPDX license expression
+47 info package.json grunt-google-cdn@0.4.3 license should be a valid SPDX license expression
+48 info package.json fluidity@0.2.3 No license field.
+49 info package.json grunt-svgmin@2.0.1 No license field.
+50 info package.json grunt-wiredep@2.0.0 No license field.
+51 info package.json grunt-contrib-imagemin@0.9.4 No license field.
+52 info package.json grunt@0.4.5 No license field.
+53 verbose readDependencies loading dependencies from /Users/eugene/Documents/projects/personal/gradients/package.json
+54 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/fluidity/package.json
+55 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt/package.json
+56 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-autoprefixer/package.json
+57 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-concurrent/package.json
+58 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-clean/package.json
+59 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-concat/package.json
+60 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-connect/package.json
+61 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-copy/package.json
+62 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-cssmin/package.json
+63 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-htmlmin/package.json
+64 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-imagemin/package.json
+65 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-jshint/package.json
+66 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-stylus/package.json
+67 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-uglify/package.json
+68 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-contrib-watch/package.json
+69 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-filerev/package.json
+70 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-google-cdn/package.json
+71 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-newer/package.json
+72 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-ng-annotate/package.json
+73 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-svgmin/package.json
+74 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-usemin/package.json
+75 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/grunt-wiredep/package.json
+76 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/jasmine-core/package.json
+77 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/jshint-stylish/package.json
+78 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/load-grunt-tasks/package.json
+79 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/time-grunt/package.json
+80 verbose targetResolver reading package data from /Users/eugene/Documents/projects/personal/gradients/node_modules/.bin/phantomjs/package.json
+81 verbose already installed skipping grunt-filerev@^2.1.2 /Users/eugene/Documents/projects/personal/gradients
+82 verbose already installed skipping grunt-google-cdn@^0.4.3 /Users/eugene/Documents/projects/personal/gradients
+83 verbose already installed skipping grunt-newer@^1.1.0 /Users/eugene/Documents/projects/personal/gradients
+84 verbose already installed skipping grunt-ng-annotate@^0.9.2 /Users/eugene/Documents/projects/personal/gradients
+85 verbose already installed skipping grunt-svgmin@^2.0.0 /Users/eugene/Documents/projects/personal/gradients
+86 verbose already installed skipping grunt-usemin@^3.0.0 /Users/eugene/Documents/projects/personal/gradients
+87 verbose already installed skipping grunt-wiredep@^2.0.0 /Users/eugene/Documents/projects/personal/gradients
+88 verbose already installed skipping jshint-stylish@^1.0.0 /Users/eugene/Documents/projects/personal/gradients
+89 silly cache add args [ 'karma-jasmine@*', null ]
+90 verbose cache add spec karma-jasmine@*
+91 silly cache add parsed spec { raw: 'karma-jasmine@*',
+91 silly cache add   scope: null,
+91 silly cache add   name: 'karma-jasmine',
+91 silly cache add   rawSpec: '*',
+91 silly cache add   spec: '*',
+91 silly cache add   type: 'range' }
+92 silly addNamed karma-jasmine@*
+93 verbose addNamed "*" is a valid semver range for karma-jasmine
+94 silly addNameRange { name: 'karma-jasmine', range: '*', hasData: false }
+95 silly mapToRegistry name karma-jasmine
+96 silly mapToRegistry using default registry
+97 silly mapToRegistry registry https://registry.npmjs.org/
+98 silly mapToRegistry uri https://registry.npmjs.org/karma-jasmine
+99 verbose addNameRange registry:https://registry.npmjs.org/karma-jasmine not in flight; fetching
+100 silly cache add args [ 'karma-phantomjs-launcher@*', null ]
+101 verbose cache add spec karma-phantomjs-launcher@*
+102 silly cache add parsed spec { raw: 'karma-phantomjs-launcher@*',
+102 silly cache add   scope: null,
+102 silly cache add   name: 'karma-phantomjs-launcher',
+102 silly cache add   rawSpec: '*',
+102 silly cache add   spec: '*',
+102 silly cache add   type: 'range' }
+103 silly addNamed karma-phantomjs-launcher@*
+104 verbose addNamed "*" is a valid semver range for karma-phantomjs-launcher
+105 silly addNameRange { name: 'karma-phantomjs-launcher', range: '*', hasData: false }
+106 silly mapToRegistry name karma-phantomjs-launcher
+107 silly mapToRegistry using default registry
+108 silly mapToRegistry registry https://registry.npmjs.org/
+109 silly mapToRegistry uri https://registry.npmjs.org/karma-phantomjs-launcher
+110 verbose addNameRange registry:https://registry.npmjs.org/karma-phantomjs-launcher not in flight; fetching
+111 verbose already installed skipping load-grunt-tasks@^3.1.0 /Users/eugene/Documents/projects/personal/gradients
+112 verbose already installed skipping time-grunt@^1.0.0 /Users/eugene/Documents/projects/personal/gradients
+113 verbose already installed skipping fluidity@^0.2.3 /Users/eugene/Documents/projects/personal/gradients
+114 verbose already installed skipping grunt@^0.4.5 /Users/eugene/Documents/projects/personal/gradients
+115 verbose already installed skipping grunt-autoprefixer@^2.0.0 /Users/eugene/Documents/projects/personal/gradients
+116 verbose already installed skipping grunt-concurrent@^1.0.0 /Users/eugene/Documents/projects/personal/gradients
+117 verbose already installed skipping grunt-contrib-clean@^0.6.0 /Users/eugene/Documents/projects/personal/gradients
+118 verbose already installed skipping grunt-contrib-concat@^0.5.0 /Users/eugene/Documents/projects/personal/gradients
+119 verbose already installed skipping grunt-contrib-connect@^0.9.0 /Users/eugene/Documents/projects/personal/gradients
+120 verbose already installed skipping grunt-contrib-copy@^0.7.0 /Users/eugene/Documents/projects/personal/gradients
+121 verbose already installed skipping grunt-contrib-cssmin@^0.12.0 /Users/eugene/Documents/projects/personal/gradients
+122 verbose request uri https://registry.npmjs.org/karma-jasmine
+123 verbose request no auth needed
+124 info attempt registry request try #1 at 15:33:45
+125 verbose request id 6f925a38f48cc542
+126 http request GET https://registry.npmjs.org/karma-jasmine
+127 verbose request uri https://registry.npmjs.org/karma-phantomjs-launcher
+128 verbose request no auth needed
+129 info attempt registry request try #1 at 15:33:45
+130 http request GET https://registry.npmjs.org/karma-phantomjs-launcher
+131 verbose already installed skipping grunt-contrib-htmlmin@^0.4.0 /Users/eugene/Documents/projects/personal/gradients
+132 verbose already installed skipping grunt-contrib-imagemin@^0.9.4 /Users/eugene/Documents/projects/personal/gradients
+133 verbose already installed skipping grunt-contrib-jshint@^0.11.0 /Users/eugene/Documents/projects/personal/gradients
+134 verbose already installed skipping grunt-contrib-stylus@^0.21.0 /Users/eugene/Documents/projects/personal/gradients
+135 verbose already installed skipping grunt-contrib-uglify@^0.7.0 /Users/eugene/Documents/projects/personal/gradients
+136 verbose already installed skipping grunt-contrib-watch@^0.6.1 /Users/eugene/Documents/projects/personal/gradients
+137 http 200 https://registry.npmjs.org/karma-jasmine
+138 silly get cb [ 200,
+138 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+138 silly get     etag: '"2J6UAR9NXZPCFGE8G52CPBZOW"',
+138 silly get     'content-type': 'application/json',
+138 silly get     'cache-control': 'max-age=60',
+138 silly get     'content-length': '35059',
+138 silly get     'accept-ranges': 'bytes',
+138 silly get     date: 'Fri, 07 Aug 2015 22:33:34 GMT',
+138 silly get     via: '1.1 varnish',
+138 silly get     age: '21',
+138 silly get     connection: 'keep-alive',
+138 silly get     'x-served-by': 'cache-lax1425-LAX',
+138 silly get     'x-cache': 'HIT',
+138 silly get     'x-cache-hits': '1',
+138 silly get     'x-timer': 'S1438986814.189694,VS0,VE0',
+138 silly get     vary: 'Accept' } ]
+139 verbose get saving karma-jasmine to /Users/eugene/.npm/registry.npmjs.org/karma-jasmine/.cache.json
+140 http 200 https://registry.npmjs.org/karma-phantomjs-launcher
+141 silly get cb [ 200,
+141 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+141 silly get     etag: '"DURDHZMHLSTWBL2MPWESJVL16"',
+141 silly get     'content-type': 'application/json',
+141 silly get     'cache-control': 'max-age=60',
+141 silly get     'content-length': '21378',
+141 silly get     'accept-ranges': 'bytes',
+141 silly get     date: 'Fri, 07 Aug 2015 22:33:34 GMT',
+141 silly get     via: '1.1 varnish',
+141 silly get     age: '21',
+141 silly get     connection: 'keep-alive',
+141 silly get     'x-served-by': 'cache-lax1421-LAX',
+141 silly get     'x-cache': 'HIT',
+141 silly get     'x-cache-hits': '1',
+141 silly get     'x-timer': 'S1438986814.194169,VS0,VE0',
+141 silly get     vary: 'Accept' } ]
+142 verbose get saving karma-phantomjs-launcher to /Users/eugene/.npm/registry.npmjs.org/karma-phantomjs-launcher/.cache.json
+143 silly addNameRange number 2 { name: 'karma-jasmine', range: '*', hasData: true }
+144 silly addNameRange versions [ 'karma-jasmine',
+144 silly addNameRange   [ '0.0.1',
+144 silly addNameRange     '0.0.2',
+144 silly addNameRange     '0.0.3',
+144 silly addNameRange     '0.1.0',
+144 silly addNameRange     '0.1.1',
+144 silly addNameRange     '0.1.2',
+144 silly addNameRange     '0.1.3',
+144 silly addNameRange     '0.1.4',
+144 silly addNameRange     '0.1.5',
+144 silly addNameRange     '0.2.0',
+144 silly addNameRange     '0.2.1',
+144 silly addNameRange     '0.2.2',
+144 silly addNameRange     '0.2.3',
+144 silly addNameRange     '0.3.0',
+144 silly addNameRange     '0.3.1',
+144 silly addNameRange     '0.3.2',
+144 silly addNameRange     '0.3.3',
+144 silly addNameRange     '0.3.4',
+144 silly addNameRange     '0.3.5',
+144 silly addNameRange     '0.3.6',
+144 silly addNameRange     '0.1.6' ] ]
+145 silly addNamed karma-jasmine@0.3.6
+146 verbose addNamed "0.3.6" is a plain semver version for karma-jasmine
+147 silly addNameRange number 2 { name: 'karma-phantomjs-launcher', range: '*', hasData: true }
+148 silly addNameRange versions [ 'karma-phantomjs-launcher',
+148 silly addNameRange   [ '0.0.1',
+148 silly addNameRange     '0.0.2',
+148 silly addNameRange     '0.0.3',
+148 silly addNameRange     '0.1.0',
+148 silly addNameRange     '0.1.1',
+148 silly addNameRange     '0.1.2',
+148 silly addNameRange     '0.1.3',
+148 silly addNameRange     '0.1.4',
+148 silly addNameRange     '0.2.0',
+148 silly addNameRange     '0.2.1' ] ]
+149 silly addNamed karma-phantomjs-launcher@0.2.1
+150 verbose addNamed "0.2.1" is a plain semver version for karma-phantomjs-launcher
+151 silly mapToRegistry name karma-phantomjs-launcher
+152 silly mapToRegistry using default registry
+153 silly mapToRegistry registry https://registry.npmjs.org/
+154 silly mapToRegistry uri https://registry.npmjs.org/karma-phantomjs-launcher
+155 verbose addRemoteTarball https://registry.npmjs.org/karma-phantomjs-launcher/-/karma-phantomjs-launcher-0.2.1.tgz not in flight; adding
+156 verbose addRemoteTarball [ 'https://registry.npmjs.org/karma-phantomjs-launcher/-/karma-phantomjs-launcher-0.2.1.tgz',
+156 verbose addRemoteTarball   '7c15fbb82b7661b17ed19391f019d76554b654df' ]
+157 silly mapToRegistry name karma-jasmine
+158 silly mapToRegistry using default registry
+159 silly mapToRegistry registry https://registry.npmjs.org/
+160 silly mapToRegistry uri https://registry.npmjs.org/karma-jasmine
+161 verbose addRemoteTarball https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.6.tgz not in flight; adding
+162 verbose addRemoteTarball [ 'https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.6.tgz',
+162 verbose addRemoteTarball   'ddcc34413ac0405aa34ce29ff472e957420b857a' ]
+163 info retry fetch attempt 1 at 15:33:45
+164 info attempt registry request try #1 at 15:33:45
+165 http fetch GET https://registry.npmjs.org/karma-phantomjs-launcher/-/karma-phantomjs-launcher-0.2.1.tgz
+166 info retry fetch attempt 1 at 15:33:45
+167 info attempt registry request try #1 at 15:33:45
+168 http fetch GET https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.6.tgz
+169 http fetch 200 https://registry.npmjs.org/karma-phantomjs-launcher/-/karma-phantomjs-launcher-0.2.1.tgz
+170 silly fetchAndShaCheck shasum 7c15fbb82b7661b17ed19391f019d76554b654df
+171 http fetch 200 https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.6.tgz
+172 verbose addTmpTarball /var/folders/yk/0pdv9pz15yz74bc9w8tdf4mm0000gn/T/npm-6902-40084413/registry.npmjs.org/karma-phantomjs-launcher/-/karma-phantomjs-launcher-0.2.1.tgz not in flight; adding
+173 verbose addTmpTarball already have metadata; skipping unpack for karma-phantomjs-launcher@0.2.1
+174 silly fetchAndShaCheck shasum ddcc34413ac0405aa34ce29ff472e957420b857a
+175 verbose addTmpTarball /var/folders/yk/0pdv9pz15yz74bc9w8tdf4mm0000gn/T/npm-6902-40084413/registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.6.tgz not in flight; adding
+176 verbose addTmpTarball already have metadata; skipping unpack for karma-jasmine@0.3.6
+177 silly cache afterAdd karma-phantomjs-launcher@0.2.1
+178 verbose afterAdd /Users/eugene/.npm/karma-phantomjs-launcher/0.2.1/package/package.json not in flight; writing
+179 silly cache afterAdd karma-jasmine@0.3.6
+180 verbose afterAdd /Users/eugene/.npm/karma-jasmine/0.3.6/package/package.json not in flight; writing
+181 verbose afterAdd /Users/eugene/.npm/karma-phantomjs-launcher/0.2.1/package/package.json written
+182 verbose afterAdd /Users/eugene/.npm/karma-jasmine/0.3.6/package/package.json written
+183 silly install resolved [ { name: 'karma-phantomjs-launcher',
+183 silly install resolved     version: '0.2.1',
+183 silly install resolved     description: 'A Karma plugin. Launcher for PhantomJS.',
+183 silly install resolved     main: 'index.js',
+183 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+183 silly install resolved     repository:
+183 silly install resolved      { type: 'git',
+183 silly install resolved        url: 'git://github.com/karma-runner/karma-phantomjs-launcher.git' },
+183 silly install resolved     keywords: [ 'karma-plugin', 'karma-launcher', 'phantomjs' ],
+183 silly install resolved     author: { name: 'Vojta Jina', email: 'vojta.jina@gmail.com' },
+183 silly install resolved     dependencies: { lodash: '^3.10.1' },
+183 silly install resolved     peerDependencies: { karma: '>=0.9', phantomjs: '>=1.9' },
+183 silly install resolved     license: 'MIT',
+183 silly install resolved     devDependencies:
+183 silly install resolved      { eslint: '^1.0.0',
+183 silly install resolved        'eslint-config-standard': '^4.0.0',
+183 silly install resolved        'eslint-plugin-react': '^3.2.0',
+183 silly install resolved        grunt: '~0.4.1',
+183 silly install resolved        'grunt-auto-release': '~0.0.2',
+183 silly install resolved        'grunt-bump': '~0.3.1',
+183 silly install resolved        'grunt-conventional-changelog': '^1.2.2',
+183 silly install resolved        'grunt-eslint': '^17.0.0',
+183 silly install resolved        'grunt-karma': '^0.11.0',
+183 silly install resolved        'grunt-npm': '~0.0.2',
+183 silly install resolved        'jasmine-core': '^2.3.4',
+183 silly install resolved        karma: '^0.13.6',
+183 silly install resolved        'karma-jasmine': '^0.3.5',
+183 silly install resolved        'load-grunt-tasks': '^3.2.0' },
+183 silly install resolved     contributors:
+183 silly install resolved      [ [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object] ],
+183 silly install resolved     gitHead: 'ef6612be1f88e975d43d94c85ef045559363cc54',
+183 silly install resolved     bugs: { url: 'https://github.com/karma-runner/karma-phantomjs-launcher/issues' },
+183 silly install resolved     homepage: 'https://github.com/karma-runner/karma-phantomjs-launcher#readme',
+183 silly install resolved     _id: 'karma-phantomjs-launcher@0.2.1',
+183 silly install resolved     _shasum: '7c15fbb82b7661b17ed19391f019d76554b654df',
+183 silly install resolved     _from: 'karma-phantomjs-launcher@*',
+183 silly install resolved     _npmVersion: '2.13.3',
+183 silly install resolved     _nodeVersion: '0.12.0',
+183 silly install resolved     _npmUser: { name: 'dignifiedquire', email: 'dignifiedquire@gmail.com' },
+183 silly install resolved     dist:
+183 silly install resolved      { shasum: '7c15fbb82b7661b17ed19391f019d76554b654df',
+183 silly install resolved        tarball: 'http://registry.npmjs.org/karma-phantomjs-launcher/-/karma-phantomjs-launcher-0.2.1.tgz' },
+183 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+183 silly install resolved     directories: {},
+183 silly install resolved     _resolved: 'https://registry.npmjs.org/karma-phantomjs-launcher/-/karma-phantomjs-launcher-0.2.1.tgz' },
+183 silly install resolved   { name: 'karma-jasmine',
+183 silly install resolved     version: '0.3.6',
+183 silly install resolved     description: 'A Karma plugin - adapter for Jasmine testing framework.',
+183 silly install resolved     main: 'lib/index.js',
+183 silly install resolved     scripts: { test: 'grunt test' },
+183 silly install resolved     repository:
+183 silly install resolved      { type: 'git',
+183 silly install resolved        url: 'git://github.com/karma-runner/karma-jasmine.git' },
+183 silly install resolved     keywords: [ 'karma-plugin', 'karma-adapter', 'jasmine' ],
+183 silly install resolved     author: { name: 'Vojta Jina', email: 'vojta.jina@gmail.com' },
+183 silly install resolved     dependencies: {},
+183 silly install resolved     devDependencies:
+183 silly install resolved      { grunt: '~0.4.1',
+183 silly install resolved        'grunt-contrib-jshint': '~0.6',
+183 silly install resolved        karma: '',
+183 silly install resolved        'karma-jasmine': '~0.1.0',
+183 silly install resolved        'karma-chrome-launcher': '~0.1.0',
+183 silly install resolved        'karma-firefox-launcher': '~0.1.0',
+183 silly install resolved        'grunt-karma': '~0.8.0',
+183 silly install resolved        'grunt-auto-release': '~0.0.2',
+183 silly install resolved        'grunt-npm': '~0.0.2',
+183 silly install resolved        'grunt-bump': '~0.0.7',
+183 silly install resolved        'jasmine-core': '~2.1.0' },
+183 silly install resolved     peerDependencies: { 'jasmine-core': '*' },
+183 silly install resolved     license: 'MIT',
+183 silly install resolved     contributors:
+183 silly install resolved      [ [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object],
+183 silly install resolved        [Object] ],
+183 silly install resolved     gitHead: '76170f6cbc8902716fbac216b4bc1d681c8b39a2',
+183 silly install resolved     bugs: { url: 'https://github.com/karma-runner/karma-jasmine/issues' },
+183 silly install resolved     homepage: 'https://github.com/karma-runner/karma-jasmine#readme',
+183 silly install resolved     _id: 'karma-jasmine@0.3.6',
+183 silly install resolved     _shasum: 'ddcc34413ac0405aa34ce29ff472e957420b857a',
+183 silly install resolved     _from: 'karma-jasmine@*',
+183 silly install resolved     _npmVersion: '2.9.0',
+183 silly install resolved     _nodeVersion: '0.10.30',
+183 silly install resolved     _npmUser: { name: 'zzo', email: 'mark@zzo.com' },
+183 silly install resolved     dist:
+183 silly install resolved      { shasum: 'ddcc34413ac0405aa34ce29ff472e957420b857a',
+183 silly install resolved        tarball: 'http://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.6.tgz' },
+183 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+183 silly install resolved     directories: {},
+183 silly install resolved     _resolved: 'https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.6.tgz' } ]
+184 info install karma-phantomjs-launcher@0.2.1 into /Users/eugene/Documents/projects/personal/gradients
+185 info install karma-jasmine@0.3.6 into /Users/eugene/Documents/projects/personal/gradients
+186 info installOne karma-phantomjs-launcher@0.2.1
+187 verbose installOne of karma-phantomjs-launcher to /Users/eugene/Documents/projects/personal/gradients not in flight; installing
+188 info installOne karma-jasmine@0.3.6
+189 verbose installOne of karma-jasmine to /Users/eugene/Documents/projects/personal/gradients not in flight; installing
+190 warn locking Error: EACCES, open '/Users/eugene/.npm/_locks/karma-phantomjs-launcher-3938845955bfd46e.lock'
+190 warn locking  /Users/eugene/.npm/_locks/karma-phantomjs-launcher-3938845955bfd46e.lock failed { [Error: EACCES, open '/Users/eugene/.npm/_locks/karma-phantomjs-launcher-3938845955bfd46e.lock']
+190 warn locking   errno: 3,
+190 warn locking   code: 'EACCES',
+190 warn locking   path: '/Users/eugene/.npm/_locks/karma-phantomjs-launcher-3938845955bfd46e.lock' }
+191 verbose stack Error: Attempt to unlock /Users/eugene/Documents/projects/personal/gradients/node_modules/karma-phantomjs-launcher, which hasn't been locked
+191 verbose stack     at unlock (/usr/local/lib/node_modules/npm/lib/utils/locker.js:66:11)
+191 verbose stack     at cb (/usr/local/lib/node_modules/npm/lib/install.js:1017:5)
+191 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:1021:20
+191 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/locker.js:40:9
+191 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:149:38)
+191 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:177:38
+191 verbose stack     at Object.oncomplete (fs.js:107:15)
+192 verbose cwd /Users/eugene/Documents/projects/personal/gradients
+193 error Darwin 14.3.0
+194 error argv "node" "/usr/local/bin/npm" "install"
+195 error node v0.10.33
+196 error npm  v2.11.3
+197 error Attempt to unlock /Users/eugene/Documents/projects/personal/gradients/node_modules/karma-phantomjs-launcher, which hasn't been locked
+198 error If you need help, you may report this error at:
+198 error     <https://github.com/npm/npm/issues>
+199 verbose exit [ 1, true ]
