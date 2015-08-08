@@ -1,7 +1,12 @@
 <gradients.panel panel-title="Gradient Presets" class="gradient-presets">
   <div class="gradient-presets__container">
     <div class="" ng-repeat="item in presetItems track by $index">
-      <gradients.preset preset-style="item" gradient-styles="data" on-preset-changed="setSelectedPreset" class="gradient-presets__items">
+      <gradients.preset
+        preset-style="item"
+        gradient-type="gradient"
+        gradient-styles="data"
+        on-preset-changed="setSelectedPreset"
+        class="gradient-presets__items">
       </gradients.preset>
     </div>
   </div>

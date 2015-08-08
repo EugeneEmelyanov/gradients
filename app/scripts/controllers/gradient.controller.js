@@ -5,17 +5,20 @@
 
   var app = angular.module('gradientsApp');
 
-  app.controller('gradients.GradientsCtrl', function($scope, $q, stylesService, calculateStyles) {
+  app.controller('gradients.GradientsCtrl', function($scope, $q, $timeout, stylesService, calculateStyles) {
         $scope.gradientStops = []
         $q.all([stylesService.getGradientStyles(),
                 stylesService.getLinearGradientDirections(),
                 stylesService.getRadialGradientPositions(),
-                stylesService.getRadialGradientSizes()]).then(function(result) {
+                stylesService.getRadialGradientSizes(),
+                stylesService.getGradientPresets()]).then(function(result) {
             $scope.data = {};
             $scope.data.gradientStyles = result[0].data.gradientStyles;
             $scope.data.linearGradientDirections = result[1].data.linearGradientDirections;
             $scope.data.radialGradientPositions = result[2].data.radialGradientPositions;
             $scope.data.radialGradientSizes = result[3].data.radialGradientSizes;
+            $scope.presetItems = result[4].data.presets;
+            angular.copy($scope.presetItems[0], $scope.gradientStops);
 
 
             $scope.gradient = {};
@@ -52,41 +55,11 @@
             }
 
             $scope.changeColorStop = function(index, color) {
-              $scope.gradientStops[index].color = color;
-              validateString();
+                $timeout(function() { $scope.gradientStops[index].color = color}, 10);
             }
 
-            $scope.presetItems = [
-              {gradient: {
-                gradientStyle: "Linear",
-                gradientDirection: "to right",
-                stops: [
-                  {location: 0,
-                   color: "#008080"},
-                  {location: 25,
-                   color: "#FFFFFF"},
-                  {location: 50,
-                   color: "#05C1FF"},
-                  {location: 75,
-                   color: "#FFFFFF"},
-                  {location:100,
-                   color: "#005757"}
-                ]
-              }},
-              { gradient: {
-                  gradientStyle: "Linear",
-                    gradientDirection: "to right",
-                    stops: [
-                    {location: 0,
-                      color: "#FF0000"},
-                    {location:100,
-                      color: "#000000"}
-                  ]
-              }},
-            ];
-
           $scope.setSelectedPreset = function(stops) {
-             $scope.gradientStops = stops;
+             angular.copy(stops, $scope.gradientStops);
              $scope.$digest();
           }
 
@@ -94,23 +67,6 @@
            //  var item = $scope.presetItems[i];
            //  item.styleString = calculateStyles(item, $scope.data, item.gradient.stops);
            //}
-
-            $scope.gradientStops = [{
-              location: 0,
-              color: "#FFFFFF"
-            },
-              {
-                location: 50,
-                color: "#037B3D"
-              },
-              {
-                location: 75,
-                color: "#D13305"
-              },
-              {
-                location: 100,
-                color: "#3366FF"
-              }]
 
         });
   });

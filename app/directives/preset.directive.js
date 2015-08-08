@@ -11,14 +11,15 @@
       scope: {
         presetStyle: "=presetStyle",
         gradientStyles: "=gradientStyles",
+        gradientType: "=gradientType",
         onPresetChanged: "&onPresetChanged"
       },
       link: function(scope, elem, attr) {
 
-        scope.styleStr = calculateStyles(scope.presetStyle, scope.gradientStyles, scope.presetStyle.gradient.stops);
+        scope.styleStr = calculateStyles(scope.gradientType, scope.gradientStyles, scope.presetStyle);
 
         elem.on("click", function(evt) {
-           scope.onPresetChanged()(scope.presetStyle.gradient.stops);
+           scope.onPresetChanged()(scope.presetStyle);
         });
 
       }

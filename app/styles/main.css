@@ -36,7 +36,7 @@
 .gradient-presets__container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .gradient-presets__items {
   flex: 0 1 15%;
@@ -44,8 +44,8 @@
   white-space: normal;
 }
 .gradient-presets .preset {
-  width: 40px;
-  height: 40px;
+  width: 100px;
+  height: 100px;
   margin: 0 5px 0 5px;
   border: 1px solid #fff;
   cursor: pointer;
