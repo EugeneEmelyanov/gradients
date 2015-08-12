@@ -70,30 +70,7 @@ label {
   width: 100%;
   ackground-color: #00b3ee;
 }
-.header .nav {
-  height: 40px;
-}
-.header .nav ul {
-  display: inline-block;
-  position: absolute;
-  right: 30px;
-}
-.header .nav ul li {
-  display: inline-block;
-  border: 2px solid #ffa500;
-  margin: -3px;
-  padding: 5px 10px 5px 10px;
-}
-.header .nav ul li:first-child {
-  border-radius: 5px 0 0 5px;
-}
-.header .nav ul li:last-child {
-  border-radius: 0 5px 5px 0;
-}
-.header a {
-  text-decoration: none;
-  color: #ffa500;
-}
+.header,
 .button-group {
   display: flex;
   flex-wrap: wrap;
