@@ -15,6 +15,9 @@
             },
             getRadialGradientSizes: function() {
                 return $http.get(API.RADIAL_GRADIENT_SIZES)
+            },
+            getGradientPresets: function() {
+                return $http.get(API.GRADIENT_PRESETS);
             }
         }
     })

@@ -38,13 +38,16 @@
                 styleString = styleString.replace("%1", data.gradientStyles[0].value);
                 styleString = styleString.replace("%2", data.linearGradientDirections[0].value);
             }
-            var str = stops.map(function(item) {
-              return item.color +" " + item.location + "%";
-            }).reduce(function(prValue, currentValue) {
-              return prValue + ", " + currentValue;
-            });
-            styleString = styleString.replace("%3", str);
-            return {'background-image': styleString};
+
+            if (stops && stops.length > 0) {
+              var str = stops.map(function(item) {
+                return item.color +" " + item.location + "%";
+              }).reduce(function(prValue, currentValue) {
+                return prValue + ", " + currentValue;
+              });
+              styleString = styleString.replace("%3", str);
+            }
+          return {'background-image': styleString};
         }
     });
 })();
