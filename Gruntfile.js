@@ -182,7 +182,8 @@ module.exports = function (grunt) {
       sass: {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{styl}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
-      }
+      },
+      exclude: ["bower_components/requiresjs/"]
     },
 
     // Compiles Sass to CSS and generates necessary files if requested
