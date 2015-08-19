@@ -2,6 +2,13 @@
   width: 100%;
   display: inline-block;
 }
+#gradients .panel-heading {
+  background-color: #000;
+}
+#gradients .sub-header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .gradient_options {
   font-size: 1.25em;
 }

@@ -1,12 +1,12 @@
 {
     "linearGradientDirections": [
-        {"name": "to bottom right", "value": "to bottom right"},
-        {"name": "to bottom", "value": "to bottom"},
-        {"name": "to bottom left", "value": "to bottom left"},
-        {"name": "to right", "value": "to right"},
-        {"name": "to left", "value": "to left"},
-        {"name": "to top right", "value": "to top right"},
-        {"name": "to top", "value": "to top"},
-        {"name": "to top left", "value": "to top left"}
+        {"name": "to bottom right", "value": "top left", "safariValue":["left top", "right bottom"]},
+        {"name": "to bottom", "value": "top", "safariValue":["left top", "left bottom"]},
+        {"name": "to bottom left", "value": "top right", "safariValue":["right top", "left bottom"]},
+        {"name": "to right", "value": "left", "safariValue":["left top", "right top"]},
+        {"name": "to left", "value": "right", "safariValue":["right top", "left top"]},
+        {"name": "to top right", "value": "bottom left", "safariValue":["left bottom", "right top"]},
+        {"name": "to top", "value": "bottom", "safariValue":["left bottom", "left top"]},
+        {"name": "to top left", "value": "bottom right", "safariValue":["right bottom", "left top"]}
     ]
 }

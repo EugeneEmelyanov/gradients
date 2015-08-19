@@ -4,9 +4,9 @@
 (function() {
   var directives = angular.module("directives");
 
-  directives.directive("gradients.preset", function(calculateStyles) {
+  directives.directive("gradients.preset", function(CalcCssString) {
     return {
-      template: "<div class='preset' ng-style='styleStr'></div>",
+      template: "<div class='preset' style='{{styleStr}}'></div>",
       restrict: "E",
       scope: {
         presetStyle: "=presetStyle",
@@ -16,7 +16,7 @@
       },
       link: function(scope, elem, attr) {
 
-        scope.styleStr = calculateStyles(scope.gradientType, scope.gradientStyles, scope.presetStyle);
+        scope.styleStr = CalcCssString.getCss(scope.gradientStyles, scope.gradientType, scope.presetStyle);
 
         elem.on("click", function(evt) {
            scope.onPresetChanged()(scope.presetStyle);

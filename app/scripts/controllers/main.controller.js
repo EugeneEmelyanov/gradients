@@ -10,6 +10,8 @@
       return $location.path();
     }
 
+    $location.path("/gradient");
+
     $scope.go = function(path, anchor) {
       if (path === "/") {
         var anchor = $(this);
