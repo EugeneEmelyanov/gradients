@@ -24,6 +24,7 @@ angular
         templateUrl: 'views/gradients.html',
         controller: 'gradients.GradientsCtrl'
       })
+      .when("/")
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
