@@ -5,7 +5,7 @@
 
   var app = angular.module('gradientsApp');
 
-  app.controller('gradients.GradientsCtrl', function($scope, $q, $timeout, stylesService, calculateStyles) {
+  app.controller('gradients.GradientsCtrl', function($scope, $q, $timeout, stylesService, calculateStyles, CalcCssString) {
         $scope.gradientStops = []
         $q.all([stylesService.getGradientStyles(),
                 stylesService.getLinearGradientDirections(),
@@ -39,7 +39,8 @@
             }, true);
 
             function validateString() {
-              $scope.styleString = calculateStyles($scope.gradient, $scope.data, $scope.gradientStops);
+              //$scope.styleString = calculateStyles($scope.gradient, $scope.data, $scope.gradientStops);
+              $scope.styleString = CalcCssString.getCss($scope.data, $scope.gradient, $scope.gradientStops);
             }
 
             $scope.addStop = function(event) {

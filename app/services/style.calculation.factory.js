@@ -2,9 +2,8 @@
   var module = angular.module("gradientsApp");
 
   module.service("CalcCssString", function(gradientCSSTemplate) {
-    return function() {
        var str = "";
-       angular.$copy(gradientCSSTemplate, str);
+       angular.copy(gradientCSSTemplate, str);
 
        function getObjectValueByName(name, collection) {
         if (typeof collection === "undefined" || collection == null) {
@@ -20,23 +19,23 @@
 
        this.getCss = function(data, gradientObject, stops) {
          var str = "";
-         angular.copy(gradientCSSTemplate, str);
+         str = angular.copy(gradientCSSTemplate, str);
 
          switch(gradientObject.gradientStyle) {
            case data.gradientStyles[0].name:
-             str = str.replace("%gradientType", data.gradientStyles[0].value);
-             str = str.replace("%gradientStyle", getObjectValueByName(gradientObject.linearGradientDirection, data.linearGradientDirections));
+             str = str.replace(/%gradientType/g, data.gradientStyles[0].value);
+             str = str.replace(/%gradientStyle/g, getObjectValueByName(gradientObject.linearGradientDirection, data.linearGradientDirections));
              break;
            case data.gradientStyles[1].name:
-             str = str.replace("%gradientType", data.gradientStyles[1].value);
-             str = str.replace("%gradientStyle", getObjectValueByName(gradientObject.radialGradientPosition, data.radialGradientPositions) +
+             str = str.replace(/%gradientType/g, data.gradientStyles[1].value);
+             str = str.replace(/%gradientStyle/g, getObjectValueByName(gradientObject.radialGradientPosition, data.radialGradientPositions) +
                ", ellipse " + getObjectValueByName(gradientObject.radialGradientSize, data.radialGradientSizes)
              );
              break;
            default:
            case data.gradientStyles[0].name:
-             str = str.replace("%gradientType", data.gradientStyles[0].value);
-             str = str.replace("%gradientStyle", data.linearGradientDirections[0].value);
+             str = str.replace(/%gradientType/g, data.gradientStyles[0].value);
+             str = str.replace(/%gradientStyle/g, data.linearGradientDirections[0].value);
            }
 
            if (stops && stops.length > 0) {
@@ -45,11 +44,10 @@
              }).reduce(function(prValue, currentValue) {
                return prValue + ", " + currentValue;
              });
-             str = str.replace("%stops", str);
+             str = str.replace(/%gradientStops/g, stopsStr);
            }
 
             return str;
          }
-    }
   })
 })();

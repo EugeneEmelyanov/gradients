@@ -1,17 +1,17 @@
 /* IE10+ */
-background-image: -ms-%gradientType-gradient(%gradientStyle, %gradientStops);
+background-image: -ms-%gradientType(%gradientStyle, %gradientStops);
 
 /* Mozilla Firefox */
-background-image: -moz-%gradientType-gradient(%gradientStyle, %gradientStops);
+background-image: -moz-%gradientType(%gradientStyle, %gradientStops);
 
 /* Opera */
-background-image: -o-%gradientType-gradient(%gradientStyle, %gradientStops);
+background-image: -o-%gradientType(%gradientStyle, %gradientStops);
 
 /* Webkit (Safari/Chrome 10) */
-background-image: -webkit-gradient(%gradientType, left top, right bottom, color-stop(0, #ffffff), color-stop(100, #00ffff));
+background-image: -webkit(%gradientType, left top, right bottom, color-stop(0, #ffffff), color-stop(100, #00ffff));
 
 /* Webkit (Chrome 11+) */
-background-image: -webkit-%gradientType-gradient(%gradientStyle, %gradientStops);
+background-image: -webkit-%gradientType(%gradientStyle, %gradientStops);
 
 /* W3C Markup */
-background-image: %gradientType-gradient(to bottom right, %gradientStops);
+background-image: %gradientType(to bottom right, %gradientStops);
