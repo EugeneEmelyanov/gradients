@@ -18,6 +18,9 @@
             },
             getGradientPresets: function() {
                 return $http.get(API.GRADIENT_PRESETS);
+            },
+            getGradientCssTemplate: function() {
+                return $http.get(API.CSS_TEMPLATE);
             }
         }
     })

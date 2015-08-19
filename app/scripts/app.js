@@ -24,12 +24,13 @@ angular
         templateUrl: 'views/gradients.html',
         controller: 'gradients.GradientsCtrl'
       })
-      .when("/")
+      .when('/', {
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
       .otherwise({
-        redirectTo: '/gradient'
+        redirectTo: '/'
       });
   });
