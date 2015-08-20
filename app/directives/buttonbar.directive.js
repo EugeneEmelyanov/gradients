@@ -6,7 +6,7 @@
 
     module.directive('gradients.buttonbar', function() {
         return {
-            templateUrl: '/directives/buttonbar.template.html',
+            templateUrl: './directives/buttonbar.template.html',
             scope: {
                 dataprovider: "@dataprovider",
                 selectedItemChange: "&selectedItemChange"

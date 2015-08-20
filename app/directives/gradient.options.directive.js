@@ -19,7 +19,7 @@
                 $scope.gradient.radialGradientSize = item;
             }
         },
-        templateUrl: "/directives/gradient.options.template.html"
+        templateUrl: "./directives/gradient.options.template.html"
       }
   });
 })();

@@ -8,7 +8,7 @@
     return {
       restrict: "E",
       transclude: true,
-      templateUrl: "/directives/panel.template.html",
+      templateUrl: "./directives/panel.template.html",
       scope: {
         "panelTitle": "@panelTitle"
       }

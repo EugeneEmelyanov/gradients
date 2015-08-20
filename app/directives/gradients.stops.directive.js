@@ -6,7 +6,7 @@
 
     directives.directive('gradients.stops', function() {
         return {
-          templateUrl: '/directives/gradient.stops.template.html',
+          templateUrl: './directives/gradient.stops.template.html',
           compile: function compile(tElement, attrs, transclude) {
             return {
               post: function postLink(scope, elem, attrs) {
