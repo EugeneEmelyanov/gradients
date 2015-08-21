@@ -1,6 +1,7 @@
 #gradients .gradients__panel {
   width: 100%;
   display: inline-block;
+  min-height: 300px;
 }
 #gradients .panel-heading {
   background-color: #000;
