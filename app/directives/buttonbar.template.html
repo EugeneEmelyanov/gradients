@@ -1,8 +1,9 @@
 <div class="button-group" role="group">
-    <button ng-repeat="item in ::items track by $index"
-            value="{{::item.name}}"
-            type="button"
-            class="btn flex-item"
-            ng-class="{'active': $index == 0, 'btn btn-default btn-lg':true}"
-            ng-click="itemClicked($index)">{{::item.name}}</button>
+	<button ng-repeat="item in ::items track by $index"
+			value="{{::item.name}}"
+			type="button"
+			class="btn flex-item"
+			ng-class="{'active': $index == 0, 'btn btn-default btn-lg':true}"
+			ng-click="itemClicked($index)">{{::item.name}}
+	</button>
 </div>
