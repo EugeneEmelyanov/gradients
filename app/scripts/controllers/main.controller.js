@@ -11,6 +11,7 @@
 		}
 
 		//$location.path("/gradient");
+		showAngularStats();
 
 		$scope.go = function (path, anc_id) {
 			if (path === "/") {
