@@ -64,6 +64,10 @@
 				}, 10);
 			}
 
+			$scope.createPreset = function() {
+				
+			}
+
 			$scope.setSelectedPreset = function (stops) {
 				angular.copy(stops, $scope.gradientStops);
 				$scope.$digest();
