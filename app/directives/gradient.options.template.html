@@ -15,15 +15,15 @@
 
 		<section ng-show="gradient.gradientStyle == data.gradientStyles[0].name">
 			<gradients.buttonbar selected-item-change="linearGradientTypeChanged"
-								 dataprovider="{{::data.linearGradientDirections}}"></gradients.buttonbar>
+								 dataprovider="data.linearGradientDirections"></gradients.buttonbar>
 		</section>
 		<section ng-show="gradient.gradientStyle == data.gradientStyles[1].name">
 			<label>Gradients Position</label>
 			<gradients.buttonbar selected-item-change="radialGradientPositionChange"
-								 dataprovider="{{::data.radialGradientPositions}}"></gradients.buttonbar>
+								 dataprovider="data.radialGradientPositions"></gradients.buttonbar>
 			<label>Sizes</label>
 			<gradients.buttonbar selected-item-change="radialGradientSizeChange"
-								 dataprovider="{{::data.radialGradientSizes}}"></gradients.buttonbar>
+								 dataprovider="data.radialGradientSizes"></gradients.buttonbar>
 		</section>
 	</div>
 </gradients.panel>

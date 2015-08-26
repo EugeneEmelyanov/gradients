@@ -8,21 +8,20 @@
 		return {
 			templateUrl: './directives/buttonbar.template.html',
 			scope: {
-				dataprovider: "@dataprovider",
+				dataprovider: "=dataprovider",
 				selectedItemChange: "&selectedItemChange"
 			},
 			link: function postLink(scope, elem, attr) {
-				scope.items = JSON.parse(scope.dataprovider);
-				var e = elem;
-				scope.selectedItemIndex = 0;
-				scope.selectedItemChange();
+					var e = elem;
+					scope.selectedItemIndex = 0;
+					scope.selectedItemChange();
 
-				scope.itemClicked = function (index) {
-					$($('.btn', e)[scope.selectedItemIndex]).removeClass('active');
-					scope.selectedItemIndex = index;
-					$($('.btn', e)[index]).addClass('active');
-					scope.selectedItemChange()(scope.items[index].name);
-				}
+					scope.itemClicked = function (index) {
+						$($('.btn', e)[scope.selectedItemIndex]).removeClass('active');
+						scope.selectedItemIndex = index;
+						$($('.btn', e)[index]).addClass('active');
+						scope.selectedItemChange()(scope.dataprovider[index].name);
+					}
 			}
 		}
 	})

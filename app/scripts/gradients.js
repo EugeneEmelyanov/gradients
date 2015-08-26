@@ -3,7 +3,7 @@
 
       $http.get("./resources/csstemplate").then(function (result) {
         angular.module("gradientsApp").constant("config", {
-          baseUrl: "./"
+          baseUrl: "http://eugenecanhelp-app1ica.rhcloud.com"
         });
 
         angular.module("gradientsApp").constant("gradientCSSTemplate", result.data);
