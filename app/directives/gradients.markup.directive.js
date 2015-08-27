@@ -1,14 +1,14 @@
 (function () {
 
-	var module = angular.module("directives");
+	angular
+			.module("directives")
+			.directive("gradients.markup", function () {
+				return {
+					templateUrl: "./directives/gradients.markup.template.html",
+					link: function (scope, elem, attr) {
 
-	module.directive("gradients.markup", function () {
-		return {
-			templateUrl: "./directives/gradients.markup.template.html",
-			link: function (scope, elem, attr) {
-
-			}
-		}
-	})
+					}
+				}
+			})
 
 })();

@@ -1,3 +1,5 @@
+"use strict";
+
 (function() {
     angular.injector(["ng"]).invoke(["$http", function($http) {
 

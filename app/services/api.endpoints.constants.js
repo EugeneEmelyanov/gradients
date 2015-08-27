@@ -8,9 +8,9 @@
             "RADIAL_GRADIENT_POSITIONS": config.baseUrl + "/api/v1/radialpositions",
             "RADIAL_GRADIENT_SIZES": config.baseUrl + "/api/v1/radialgradientsizes",
             "GRADIENT_PRESETS": config.baseUrl + "/api/v1/presets",
-			"GRADIENT_PRESETS_CREATE": "http://localhost:8082/api/v1/presets",
-            "CSS_TEMPLATE": config.baseUrl + "resources/csstemplate",
-			"SEND_EMAIL": "http://localhost:8083/api/v1/email"
+			"GRADIENT_PRESETS_CREATE": config.baseUrl + "/api/v1/presets",
+            "CSS_TEMPLATE": "./resources/csstemplate",
+			"SEND_EMAIL": config.baseUrl + "/api/v1/email"
         }
     })
 })();
