@@ -5,13 +5,19 @@
 
 	var app = angular.module("gradientsApp");
 
-	app.controller('gradients.MainController', function ($scope, $route, $location) {
+	app.controller('gradients.MainController', function ($scope, $route, $location, CommonServices) {
 		$scope.pageName = function () {
 			return $location.path();
 		}
 
 		//$location.path("/gradient");
 		showAngularStats();
+
+		$scope.onSendMessage = function() {
+			CommonServices.sendMessage($scope.message);
+		}
+
+		$scope.message = {};
 
 		$scope.go = function (path, anc_id) {
 			if (path === "/") {

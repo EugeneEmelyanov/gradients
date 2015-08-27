@@ -65,7 +65,10 @@
 			}
 
 			$scope.createPreset = function() {
-				
+				var preset = $scope.gradientStops;
+				stylesService.createPreset({preset:preset}).then(function(res) {
+
+				});
 			}
 
 			$scope.setSelectedPreset = function (stops) {

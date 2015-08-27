@@ -21,7 +21,10 @@
             },
             getGradientCssTemplate: function() {
                 return $http.get(API.CSS_TEMPLATE);
-            }
+            },
+			createPreset: function(preset) {
+				return $http.put(API.GRADIENT_PRESETS_CREATE, preset);
+			}
         }
     })
 })();
