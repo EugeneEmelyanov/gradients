@@ -5,18 +5,19 @@
 
 	angular
 			.module('directives')
-			.directive('gradients.stops', function () {
+			.directive('gradients.stops', gradientsStops);
+
+	function gradientsStops() {
+		return {
+			templateUrl: './directives/gradient.stops.template.html',
+			compile: function compile(tElement, attrs, transclude) {
 				return {
-					templateUrl: './directives/gradient.stops.template.html',
-					compile: function compile(tElement, attrs, transclude) {
-						return {
-							post: function postLink(scope, elem, attrs) {
-								console.log("postlink");
-							}
-						}
+					post: function postLink(scope, elem, attrs) {
+						console.log("postlink");
 					}
 				}
-			});
-
+			}
+		}
+	}
 
 })();

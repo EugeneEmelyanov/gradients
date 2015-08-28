@@ -7,42 +7,44 @@
 
 	angular
 			.module("gradientsApp")
-			.controller('gradients.MainController', function ($scope, $route, $location, CommonServices) {
-				$scope.pageName = function () {
-					return $location.path();
-				}
+			.controller('gradients.MainController', MainController);
 
-				//$location.path("/gradient");
-				showAngularStats();
+	function MainController($scope, $route, $location, CommonServices) {
+		$scope.pageName = function () {
+			return $location.path();
+		}
 
-				$scope.onSendMessage = function () {
-					CommonServices.sendMessage($scope.message);
-				}
+		//$location.path("/gradient");
+		showAngularStats();
 
-				$scope.message = {};
+		$scope.onSendMessage = function () {
+			CommonServices.sendMessage($scope.message);
+		}
 
-				$scope.go = function (path, anc_id) {
-					if (path === "/") {
-						if ($location.path() !== path) {
-							var listener = $scope.$root.$on("$locationChangeSuccess", function () {
-								scrollToAcnhor();
-								listener();
-							});
-						} else {
-							scrollToAcnhor();
-						}
-					} else {
-						anc_id = "#mainBodyContainer";
+		$scope.message = {};
+
+		$scope.go = function (path, anc_id) {
+			if (path === "/") {
+				if ($location.path() !== path) {
+					var listener = $scope.$root.$on("$locationChangeSuccess", function () {
 						scrollToAcnhor();
-					}
-
-					$location.path(path);
-
-					function scrollToAcnhor() {
-						$('html, body').stop().animate({
-							scrollTop: $(anc_id).offset().top
-						}, 1000);
-					}
+						listener();
+					});
+				} else {
+					scrollToAcnhor();
 				}
-			});
+			} else {
+				anc_id = "#mainBodyContainer";
+				scrollToAcnhor();
+			}
+
+			$location.path(path);
+
+			function scrollToAcnhor() {
+				$('html, body').stop().animate({
+					scrollTop: $(anc_id).offset().top
+				}, 1000);
+			}
+		}
+	}
 })();

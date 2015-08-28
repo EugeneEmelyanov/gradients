@@ -4,26 +4,28 @@
 (function () {
 	angular
 			.module("directives")
-			.directive("gradients.preset", function (CalcCssString) {
-				return {
-					template: "<div class='preset' style='{{styleStr}}'></div>",
-					restrict: "E",
-					scope: {
-						presetStyle: "=presetStyle",
-						gradientStyles: "=gradientStyles",
-						gradientType: "=gradientType",
-						onPresetChanged: "&onPresetChanged"
-					},
-					link: function (scope, elem, attr) {
+			.directive("gradients.preset", gradientsPresets);
 
-						scope.styleStr = CalcCssString.getCss(scope.gradientStyles, scope.gradientType, scope.presetStyle);
+	function gradientsPresets(CalcCssString) {
+		return {
+			template: "<div class='preset' style='{{styleStr}}'></div>",
+			restrict: "E",
+			scope: {
+				presetStyle: "=presetStyle",
+				gradientStyles: "=gradientStyles",
+				gradientType: "=gradientType",
+				onPresetChanged: "&onPresetChanged"
+			},
+			link: function (scope, elem, attr) {
 
-						elem.on("click", function (evt) {
-							scope.onPresetChanged()(scope.presetStyle);
-						});
+				scope.styleStr = CalcCssString.getCss(scope.gradientStyles, scope.gradientType, scope.presetStyle);
 
-					}
-				}
-			});
+				elem.on("click", function (evt) {
+					scope.onPresetChanged()(scope.presetStyle);
+				});
+
+			}
+		}
+	}
 
 })();

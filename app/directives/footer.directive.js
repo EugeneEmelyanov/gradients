@@ -4,11 +4,13 @@
 (function () {
 	angular
 			.module('directives')
-			.directive('gradients.footer', function () {
-				return {
-					restrict: "E",
-					replace: true,
-					templateUrl: "./directives/footer.template.html"
-				}
-			})
+			.directive('gradients.footer', footer);
+
+	function footer() {
+		return {
+			restrict: "E",
+			replace: true,
+			templateUrl: "./directives/footer.template.html"
+		}
+	}
 })();

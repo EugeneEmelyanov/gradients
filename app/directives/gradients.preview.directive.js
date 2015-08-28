@@ -4,11 +4,13 @@
 (function () {
 	angular
 			.module('directives')
-			.directive('gradients.preview', function () {
-				return {
-					templateUrl: "./directives/gradient.preview.template.html",
-					controller: "gradients.GradientsCtrl",
-					restrict: "E"
-				}
-			})
+			.directive('gradients.preview', gradientsPreview);
+
+	function gradientsPreview() {
+		return {
+			templateUrl: "./directives/gradient.preview.template.html",
+			controller: "gradients.GradientsCtrl",
+			restrict: "E"
+		}
+	}
 })();

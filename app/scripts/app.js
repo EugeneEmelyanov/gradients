@@ -9,28 +9,29 @@
  * Main module of the application.
  */
 angular
-  .module('gradientsApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch',
-    'directives'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/gradient', {
-        templateUrl: 'views/gradients.html',
-        controller: 'gradients.GradientsCtrl'
-      })
-      .when('/', {
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/gradient'
-      });
-  });
+		.module('gradientsApp', [
+			'ngAnimate',
+			'ngCookies',
+			'ngResource',
+			'ngRoute',
+			'ngSanitize',
+			'ngTouch',
+			'directives'
+		])
+		.config(config);
+
+function config($routeProvider) {
+	$routeProvider
+			.when('/gradient', {
+				templateUrl: 'views/gradients.html',
+				controller: 'gradients.GradientsCtrl'
+			})
+			.when('/', {})
+			.when('/about', {
+				templateUrl: 'views/about.html',
+				controller: 'AboutCtrl'
+			})
+			.otherwise({
+				redirectTo: '/gradient'
+			});
+}
