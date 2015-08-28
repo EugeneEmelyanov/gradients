@@ -10,82 +10,86 @@
 			.controller('gradients.GradientsCtrl', GradientsController);
 
 	function GradientsController($scope, $q, $timeout, stylesService, CalcCssString) {
-		$scope.gradientStops = []
+
+		var gradVM = this;
+		gradVM.gradientStops = [];
+		gradVM.addStop = addStop;
+		gradVM.removeStop = removeStop;
+		gradVM.changeColorStop = changeColorStop;
+		gradVM.createPreset = createPreset;
+		gradVM.setSelectedPreset = setSelectedPreset;
+
 		$q.all([stylesService.getGradientStyles(),
 			stylesService.getLinearGradientDirections(),
 			stylesService.getRadialGradientPositions(),
 			stylesService.getRadialGradientSizes(),
 			stylesService.getGradientPresets()]).then(function (result) {
-			$scope.data = {};
-			$scope.data.gradientStyles = result[0].data.gradientStyles;
-			$scope.data.linearGradientDirections = result[1].data.linearGradientDirections;
-			$scope.data.radialGradientPositions = result[2].data.radialGradientPositions;
-			$scope.data.radialGradientSizes = result[3].data.radialGradientSizes;
-			$scope.presetItems = result[4].data.presets;
-			angular.copy($scope.presetItems[0], $scope.gradientStops);
+			gradVM.data = {};
+			gradVM.data.gradientStyles = result[0].data.gradientStyles;
+			gradVM.data.linearGradientDirections = result[1].data.linearGradientDirections;
+			gradVM.data.radialGradientPositions = result[2].data.radialGradientPositions;
+			gradVM.data.radialGradientSizes = result[3].data.radialGradientSizes;
+			gradVM.presetItems = result[4].data.presets;
+			angular.copy(gradVM.presetItems[0], gradVM.gradientStops);
 
 
-			$scope.gradient = {};
-			$scope.gradient.gradientStyle = $scope.data.gradientStyles[0].name;
-			$scope.gradient.linearGradientDirection = $scope.data.linearGradientDirections[0].name;
-			$scope.gradient.radialGradientPosition = $scope.data.radialGradientPositions[0].name;
-			$scope.gradient.radialGradientSize = $scope.data.radialGradientSizes[0].name;
+			gradVM.gradient = {};
+			gradVM.gradient.gradientStyle = gradVM.data.gradientStyles[0].name;
+			gradVM.gradient.linearGradientDirection = gradVM.data.linearGradientDirections[0].name;
+			gradVM.gradient.radialGradientPosition = gradVM.data.radialGradientPositions[0].name;
+			gradVM.gradient.radialGradientSize = gradVM.data.radialGradientSizes[0].name;
 
-			$scope.$watchGroup(["gradient.gradientStyle",
-				"gradient.linearGradientDirection",
-				"gradient.radialGradientPosition",
-				"gradient.radialGradientSize"], function () {
+			$scope.$watchGroup(["gradVM.gradient.gradientStyle",
+				"gradVM.gradient.linearGradientDirection",
+				"gradVM.gradient.radialGradientPosition",
+				"gradVM.gradient.radialGradientSize"], function () {
 				validateString();
 			});
 
-			$scope.$watch("gradientStops", function (oldV, newV) {
+			$scope.$watch("gradVM.gradientStops", function (oldV, newV) {
 				validateString();
 			}, true);
 
-			function validateString() {
-				//$scope.styleString = calculateStyles($scope.gradient, $scope.data, $scope.gradientStops);
-				$scope.styleString = CalcCssString.getCss($scope.data, $scope.gradient, $scope.gradientStops);
-			}
 
-			$scope.addStop = function (event) {
-				var gradStopLength = $scope.gradientStops.length;
-				var lastStop = $scope.gradientStops[gradStopLength - 1];
-				var lastButOneStop = $scope.gradientStops[gradStopLength - 2];
-				var loc = (Number(lastStop.location) + Number(lastButOneStop.location)) / 2;
-				$scope.gradientStops.splice(gradStopLength - 1, 0, {
-					location: loc,
-					color: '#' + Math.floor(Math.random() * 16777215).toString(16)
-				});
-			}
-
-			$scope.removeStop = function (event, index) {
-				$scope.gradientStops.splice(index, 1);
-			}
-
-			$scope.changeColorStop = function (index, color) {
-				$timeout(function () {
-					$scope.gradientStops[index].color = color
-				}, 10);
-			}
-
-			$scope.createPreset = function () {
-				var preset = $scope.gradientStops;
-				stylesService.createPreset({preset: preset}).then(function (res) {
-
-				});
-			}
-
-			$scope.setSelectedPreset = function (stops) {
-				angular.copy(stops, $scope.gradientStops);
-				$scope.$digest();
-			}
-
-			//for ( var i = 0; i < $scope.presetItems.length; i ++) {
-			//  var item = $scope.presetItems[i];
-			//  item.styleString = calculateStyles(item, $scope.data, item.gradient.stops);
-			//}
 
 		});
+
+		function validateString() {
+			gradVM.styleString = CalcCssString.getCss(gradVM.data, gradVM.gradient, gradVM.gradientStops);
+		}
+
+		function addStop(event) {
+			var gradStopLength = gradVM.gradientStops.length;
+			var lastStop = gradVM.gradientStops[gradStopLength - 1];
+			var lastButOneStop = gradVM.gradientStops[gradStopLength - 2];
+			var loc = (Number(lastStop.location) + Number(lastButOneStop.location)) / 2;
+			gradVM.gradientStops.splice(gradStopLength - 1, 0, {
+				location: loc,
+				color: '#' + Math.floor(Math.random() * 16777215).toString(16)
+			});
+		}
+
+		function removeStop(event, index) {
+			gradVM.gradientStops.splice(index, 1);
+		}
+
+		function changeColorStop(index, color) {
+			$timeout(function () {
+				gradVM.gradientStops[index].color = color
+			}, 10);
+		}
+
+		function createPreset() {
+			var preset = gradVM.gradientStops;
+			stylesService.createPreset({preset: preset}).then(function (res) {
+
+			});
+		}
+
+		function setSelectedPreset(stops) {
+			angular.copy(stops, gradVM.gradientStops);
+			gradVM.$digest();
+		}
 	}
 
 })();

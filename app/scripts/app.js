@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * @ngdoc overview
@@ -9,29 +9,26 @@
  * Main module of the application.
  */
 angular
-		.module('gradientsApp', [
-			'ngAnimate',
-			'ngCookies',
-			'ngResource',
-			'ngRoute',
-			'ngSanitize',
-			'ngTouch',
-			'directives'
+		.module("gradientsApp", [
+			"ngAnimate",
+			"ngCookies",
+			"ngResource",
+			"ngRoute",
+			"ngSanitize",
+			"ngTouch",
+			"directives"
 		])
 		.config(config);
 
 function config($routeProvider) {
 	$routeProvider
-			.when('/gradient', {
-				templateUrl: 'views/gradients.html',
-				controller: 'gradients.GradientsCtrl'
+			.when("/gradient", {
+				templateUrl: "views/gradients.html",
+				controller: "gradients.GradientsCtrl",
+				controllerAs: "gradVM"
 			})
-			.when('/', {})
-			.when('/about', {
-				templateUrl: 'views/about.html',
-				controller: 'AboutCtrl'
-			})
+			.when("/", {})
 			.otherwise({
-				redirectTo: '/gradient'
+				redirectTo: "/gradient"
 			});
 }

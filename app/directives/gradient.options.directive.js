@@ -10,18 +10,26 @@
 	function gradientOptions() {
 		return {
 			restrict: "E",
-			controller: function ($scope) {
-				$scope.linearGradientTypeChanged = function (item) {
-					$scope.gradient.linearGradientDirection = item;
-				}
-				$scope.radialGradientPositionChange = function (item) {
-					$scope.gradient.radialGradientPosition = item;
-				}
-				$scope.radialGradientSizeChange = function (item) {
-					$scope.gradient.radialGradientSize = item;
-				}
-			},
+			controllerAs: "vm",
+			bindToController: true,
+			controller: controller,
 			templateUrl: "./directives/gradient.options.template.html"
 		}
-	};
+	}
+
+	function controller($scope) {
+
+		var vm = this;
+		var gradVM = $scope.gradVM;
+
+		vm.linearGradientTypeChanged = function (item) {
+			gradVM.gradient.linearGradientDirection = item;
+		}
+		vm.radialGradientPositionChange = function (item) {
+			gradVM.gradient.radialGradientPosition = item;
+		}
+		vm.radialGradientSizeChange = function (item) {
+			gradVM.gradient.radialGradientSize = item;
+		}
+	}
 })();

@@ -10,20 +10,23 @@
 			.controller('gradients.MainController', MainController);
 
 	function MainController($location, CommonServices, $scope) {
-		this.pageName = function () {
+
+		this.message = {};
+		this.pageName = pageName;
+		this.navigateToPath = navigateToPath;
+		this.onSendMessage = onSendMessage;
+
+		showAngularStats();
+
+		function onSendMessage () {
+			CommonServices.sendMessage(this.message);
+		}
+
+		function pageName() {
 			return $location.path();
 		}
 
-		//$location.path("/gradient");
-		showAngularStats();
-
-		this.onSendMessage = function () {
-			CommonServices.sendMessage($scope.message);
-		}
-
-		this.message = {};
-
-		this.go = function (path, anc_id) {
+		function navigateToPath(path, anc_id) {
 			if (path === "/") {
 				if ($location.path() !== path) {
 					var listener = $scope.$root.$on("$locationChangeSuccess", function () {

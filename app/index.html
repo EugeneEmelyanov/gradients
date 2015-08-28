@@ -62,12 +62,12 @@
 
 			<div class="collapse navbar-collapse" id="custom-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href ng-click="main.go('/', '#home')">Home</a></li>
-					<li><a href ng-click="main.go('/', '#services')">Services</a></li>
-					<li><a href ng-click="main.go('/', '#portfolio')">Works</a></li>
-					<li><a href ng-click="main.go('/', '#skills')">Skills</a></li>
-					<li><a href ng-click="main.go('/gradient')">Playground</a></li>
-					<li><a href ng-click="main.go('/', '#contact')">Contact</a></li>
+					<li><a href ng-click="main.navigateToPath('/', '#home')">Home</a></li>
+					<li><a href ng-click="main.navigateToPath('/', '#services')">Services</a></li>
+					<li><a href ng-click="main.navigateToPath('/', '#portfolio')">Works</a></li>
+					<li><a href ng-click="main.navigateToPath('/', '#skills')">Skills</a></li>
+					<li><a href ng-click="main.navigateToPath('/gradient')">Playground</a></li>
+					<li><a href ng-click="main.navigateToPath('/', '#contact')">Contact</a></li>
 				</ul>
 			</div>
 
@@ -92,7 +92,7 @@
 				<div class="start">creating modern responsive Web Application</div>
 			</div>
 
-			<a href ng-click="main.go('/', '#services')">
+			<a href ng-click="main.navigateToPath('/', '#services')">
 				<div class="scroll-down">
             <span>
                 <i class="fa fa-angle-down fa-2x"></i>
@@ -366,7 +366,7 @@
 					</div>
 
 					<div class="col-md-12 col-lg-12 calltoaction-btn wow slideInRight" data-wow-delay=".3s">
-						<a href ng-click="main.go('/', '#contact')" class="btn btn-lg">Hire Me</a>
+						<a href ng-click="main.navigateToPath('/', '#contact')" class="btn btn-lg">Hire Me</a>
 					</div>
 
 				</div>
@@ -473,7 +473,7 @@
 		<!-- Scroll to top -->
 
 		<div class="scroll-up">
-			<a href ng-click="main.go('/', '#home')"><i class="fa fa-angle-up"></i></a>
+			<a href ng-click="main.navigateToPath('/', '#home')"><i class="fa fa-angle-up"></i></a>
 		</div>
 	</div>
 	<section ng-switch-default class="container">

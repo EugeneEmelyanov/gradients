@@ -1,30 +1,38 @@
 <gradients.panel panel-title="Gradient Options" class="gradient_options">
 	<div class="gradient_options__container">
+
 		<section class="gradient_selector">
 			<span>Gradient Style:</span>
-
 			<div class="button_group">
-				<input class="radio-inline" type="radio" name="gradientType" value="{{::data.gradientStyles[0].name}}"
-					   ng-click="gradient.gradientStyle = data.gradientStyles[0].name" checked>
-				<label class="radio_inline__label">{{::data.gradientStyles[0].name}}</label>
-				<input class="radio-inline" type="radio" name="gradientType" value="{{::data.gradientStyles[1].name}}"
-					   ng-click="gradient.gradientStyle = data.gradientStyles[1].name">
-				<label class="radio_inline__label">{{::data.gradientStyles[1].name}}</label>
+				<input class="radio-inline"
+					   type="radio"
+					   name="gradientType"
+					   value="{{::gradVM.data.gradientStyles[0].name}}"
+					   ng-click="gradVM.gradient.gradientStyle = gradVM.data.gradientStyles[0].name" checked>
+				<label class="radio_inline__label">{{::gradVM.data.gradientStyles[0].name}}</label>
+				<input class="radio-inline"
+					   type="radio"
+					   name="gradientType"
+					   value="{{::gradVM.data.gradientStyles[1].name}}"
+					   ng-click="gradVM.gradient.gradientStyle = gradVM.data.gradientStyles[1].name">
+				<label class="radio_inline__label">{{::gradVM.data.gradientStyles[1].name}}</label>
 			</div>
 		</section>
 
-		<section ng-show="gradient.gradientStyle == data.gradientStyles[0].name">
-			<gradients.buttonbar selected-item-change="linearGradientTypeChanged"
-								 dataprovider="data.linearGradientDirections"></gradients.buttonbar>
+		<section ng-show="gradVM.gradient.gradientStyle == gradVM.data.gradientStyles[0].name">
+			<gradients.buttonbar selected-item-change="vm.linearGradientTypeChanged"
+								 dataprovider="gradVM.data.linearGradientDirections"></gradients.buttonbar>
 		</section>
-		<section ng-show="gradient.gradientStyle == data.gradientStyles[1].name">
+
+		<section ng-show="gradVM.gradient.gradientStyle == gradVM.data.gradientStyles[1].name">
 			<label>Gradients Position</label>
-			<gradients.buttonbar selected-item-change="radialGradientPositionChange"
-								 dataprovider="data.radialGradientPositions"></gradients.buttonbar>
+			<gradients.buttonbar selected-item-change="vm.radialGradientPositionChange"
+								 dataprovider="gradVM.data.radialGradientPositions"></gradients.buttonbar>
 			<label>Sizes</label>
-			<gradients.buttonbar selected-item-change="radialGradientSizeChange"
-								 dataprovider="data.radialGradientSizes"></gradients.buttonbar>
+			<gradients.buttonbar selected-item-change="vm.radialGradientSizeChange"
+								 dataprovider="gradVM.data.radialGradientSizes"></gradients.buttonbar>
 		</section>
+
 	</div>
 </gradients.panel>
 
