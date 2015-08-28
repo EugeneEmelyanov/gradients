@@ -30,7 +30,7 @@
 	<!-- vendor -->
 
 </head>
-<body id="mainBodyContainer" ng-controller="gradients.MainController">
+<body id="mainBodyContainer" ng-controller="gradients.MainController as main">
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
 	your browser</a> to improve your experience.</p>
@@ -62,12 +62,12 @@
 
 			<div class="collapse navbar-collapse" id="custom-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href ng-click="go('/', '#home')">Home</a></li>
-					<li><a href ng-click="go('/', '#services')">Services</a></li>
-					<li><a href ng-click="go('/', '#portfolio')">Works</a></li>
-					<li><a href ng-click="go('/', '#skills')">Skills</a></li>
-					<li><a href ng-click="go('/gradient')">Playground</a></li>
-					<li><a href ng-click="go('/', '#contact')">Contact</a></li>
+					<li><a href ng-click="main.go('/', '#home')">Home</a></li>
+					<li><a href ng-click="main.go('/', '#services')">Services</a></li>
+					<li><a href ng-click="main.go('/', '#portfolio')">Works</a></li>
+					<li><a href ng-click="main.go('/', '#skills')">Skills</a></li>
+					<li><a href ng-click="main.go('/gradient')">Playground</a></li>
+					<li><a href ng-click="main.go('/', '#contact')">Contact</a></li>
 				</ul>
 			</div>
 
@@ -81,7 +81,7 @@
 <!-- Navigation end -->
 
 <!-- Home start -->
-<div ng-switch on="pageName()">
+<div ng-switch on="main.pageName()">
 	<div ng-switch-when="/">
 		<section id="home" class="pfblock-image screen-height">
 			<div class="home-overlay"></div>
@@ -92,7 +92,7 @@
 				<div class="start">creating modern responsive Web Application</div>
 			</div>
 
-			<a href ng-click="go('/', '#services')">
+			<a href ng-click="main.go('/', '#services')">
 				<div class="scroll-down">
             <span>
                 <i class="fa fa-angle-down fa-2x"></i>
@@ -366,7 +366,7 @@
 					</div>
 
 					<div class="col-md-12 col-lg-12 calltoaction-btn wow slideInRight" data-wow-delay=".3s">
-						<a href ng-click="go('/', '#contact')" class="btn btn-lg">Hire Me</a>
+						<a href ng-click="main.go('/', '#contact')" class="btn btn-lg">Hire Me</a>
 					</div>
 
 				</div>
@@ -409,22 +409,22 @@
 								<div class="form-group wow fadeInUp">
 									<label class="sr-only" for="c_name">Name</label>
 									<input type="text" id="c_name" class="form-control" name="c_name"
-										   ng-model="message.name" placeholder="Name">
+										   ng-model="main.message.name" placeholder="Name">
 								</div>
 
 								<div class="form-group wow fadeInUp" data-wow-delay=".1s">
 									<label class="sr-only" for="c_email">Email</label>
 									<input type="email" id="c_email" class="form-control" name="c_email"
-										   ng-model="message.email" placeholder="E-mail">
+										   ng-model="main.message.email" placeholder="E-mail">
 								</div>
 
 								<div class="form-group wow fadeInUp" data-wow-delay=".2s">
 									<textarea class="form-control" id="c_message" name="c_message" rows="7"
-											  ng-model="message.message" placeholder="Message"></textarea>
+											  ng-model="main.message.message" placeholder="Message"></textarea>
 								</div>
 
 								<button type="submit" class="btn btn-lg btn-block wow fadeInUp"
-										ng-click="onSendMessage()" data-wow-delay=".3s">Send Message
+										ng-click="main.onSendMessage()" data-wow-delay=".3s">Send Message
 								</button>
 							</div>
 							<div class="ajax-response"></div>
@@ -473,7 +473,7 @@
 		<!-- Scroll to top -->
 
 		<div class="scroll-up">
-			<a href ng-click="go('/', '#home')"><i class="fa fa-angle-up"></i></a>
+			<a href ng-click="main.go('/', '#home')"><i class="fa fa-angle-up"></i></a>
 		</div>
 	</div>
 	<section ng-switch-default class="container">
