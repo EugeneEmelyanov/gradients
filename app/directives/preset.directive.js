@@ -8,13 +8,14 @@
 		.module("directives")
 		.directive("gradients.preset", gradientsPresets);
 
+		/*jshint latedef:false*/
 	function gradientsPresets(CalcCssString) {
 		return {
 			template: "<div class='preset' style='{{vm.styleStr}}'></div>",
 			restrict: "E",
 			controllerAs: "vm",
 			bindToController: true,
-			controller: function($scope){},
+			controller: function(){},
 			scope: {
 				presetStyle: "=presetStyle",
 				gradientStyles: "=gradientStyles",
@@ -25,7 +26,7 @@
 
 				ctrl.styleStr = CalcCssString.getCss(ctrl.gradientStyles, ctrl.gradientType, ctrl.presetStyle);
 
-				elem.on("click", function(evt) {
+				elem.on("click", function() {
 					ctrl.onPresetChanged()(ctrl.presetStyle);
 				});
 
