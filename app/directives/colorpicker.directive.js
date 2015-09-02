@@ -1,27 +1,32 @@
-(function () {
+(function() {
+
+	"use strict";
 
 	angular
-			.module("directives")
-			.directive("colorPicker", colorPicker);
+		.module("directives")
+		.directive("colorPicker", colorPicker);
 
-
+	/*jslint latedef:false*/
 	function colorPicker() {
 		return {
 			link: function postLink(scope, elem, attrs) {
+				var vm = scope.gradVM;
 				elem.colorpicker({
 					color: attrs.colorPicker,
 					component: "#colorStop"
-				}).on("changeColor.colorpicker", function (event) {
+				}).on("changeColor.colorpicker", function(event) {
 					var color = event.color.toHex();
-					scope.changeColorStop(attrs.index, color);
+					vm.changeColorStop(attrs.index, color);
 				});
-				attrs.$observe("colorPicker", function (value) {
+
+				attrs.$observe("colorPicker", function(value) {
 					elem.colorpicker("setValue", value);
-				})
-				scope.$on("$destroy", function () {
+				});
+
+				scope.$on("$destroy", function() {
 					elem.colorpicker("destroy");
-				})
+				});
 			}
-		}
-	};
+		};
+	}
 })();

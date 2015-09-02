@@ -8,7 +8,7 @@
 			<span>Color:</span>
 		</div>
 	</div>
-	<div class="row gradient_stops__row" ng-repeat="stop in gradientStops track by $index">
+	<div class="row gradient_stops__row" ng-repeat="stop in gradVM.gradientStops track by $index">
 		<div class="col-md-2">
 			{{$first ? "Start": ($last ? "End" : "Stop")}}
 		</div>

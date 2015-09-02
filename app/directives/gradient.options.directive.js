@@ -2,34 +2,39 @@
  * Created by eugene on 6/25/15.
  */
 
-(function () {
-	angular
-			.module("directives")
-			.directive("gradients.options", gradientOptions);
+(function() {
+	"use strict";
 
-	function gradientOptions() {
+	angular
+		.module("directives")
+		.directive("gradients.options", GradientOptionsDirective);
+
+	/*jshint latedef:false*/
+	function GradientOptionsDirective() {
 		return {
 			restrict: "E",
 			controllerAs: "vm",
 			bindToController: true,
-			controller: controller,
+			controller: GradientOptionsDirectiveController,
 			templateUrl: "./directives/gradient.options.template.html"
-		}
+		};
 	}
 
-	function controller($scope) {
+	function GradientOptionsDirectiveController($scope) {
 
 		var vm = this;
 		var gradVM = $scope.gradVM;
 
-		vm.linearGradientTypeChanged = function (item) {
+		vm.linearGradientTypeChanged = function(item) {
 			gradVM.gradient.linearGradientDirection = item;
-		}
-		vm.radialGradientPositionChange = function (item) {
+		};
+
+		vm.radialGradientPositionChange = function(item) {
 			gradVM.gradient.radialGradientPosition = item;
-		}
-		vm.radialGradientSizeChange = function (item) {
+		};
+
+		vm.radialGradientSizeChange = function(item) {
 			gradVM.gradient.radialGradientSize = item;
-		}
+		};
 	}
 })();
