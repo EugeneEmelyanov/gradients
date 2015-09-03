@@ -11,16 +11,7 @@
 	/*jshint latedef:false*/
 	function gradientsStops() {
 		return {
-			templateUrl: "./directives/gradient.stops.template.html",
-			compile: compile
-		};
-	}
-
-	function compile(tElement, attrs, transclude) {
-		return {
-			post: function postLink(scope, elem, attrs) {
-				console.log("postlink");
-			}
+			templateUrl: "./directives/gradient.stops.template.html"
 		};
 	}
 })();

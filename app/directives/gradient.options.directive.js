@@ -20,6 +20,7 @@
 		};
 	}
 
+	/*@ngInject*/
 	function GradientOptionsDirectiveController($scope) {
 
 		var vm = this;

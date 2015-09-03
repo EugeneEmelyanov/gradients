@@ -10,6 +10,7 @@
 		.controller("gradients.GradientsCtrl", GradientsController);
 
 	/*jshint latedef:false */
+	/*@ngInject*/
 	function GradientsController($scope, $q, $timeout, gradientsData, CalcCssString) {
 
 		var gradVM = this;

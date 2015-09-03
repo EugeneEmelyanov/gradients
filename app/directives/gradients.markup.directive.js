@@ -1,6 +1,7 @@
 (function() {
 
 	"use strict";
+
 	angular
 		.module("directives")
 		.directive("gradients.markup", gradientsMarkup);

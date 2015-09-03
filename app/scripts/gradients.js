@@ -13,7 +13,7 @@
 					angular.module("gradientsApp").constant("gradientCSSTemplate", result.data);
 
 					angular.element(document).ready(function () {
-						angular.bootstrap(document, ['gradientsApp']);
+						angular.bootstrap(document, ['gradientsApp']/*, {strictDi: true}*/);
 					});
 
 				});

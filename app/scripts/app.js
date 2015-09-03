@@ -19,7 +19,7 @@ angular
 		"directives"
 	])
 	.config(config);
-
+/*@ngInject*/
 function config($routeProvider) {
 	$routeProvider
 		.when("/gradient", {
@@ -34,7 +34,7 @@ function config($routeProvider) {
 		.otherwise({
 			redirectTo: "/gradient"
 		});
-
+	/*@ngInject*/
 	function gradientsData($q, stylesService) {
 		return $q.all([stylesService.getGradientStyles(),
 			stylesService.getLinearGradientDirections(),

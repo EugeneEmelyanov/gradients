@@ -8,30 +8,32 @@
 		.module("directives")
 		.directive("gradients.preset", gradientsPresets);
 
-		/*jshint latedef:false*/
+	/*jshint latedef:false*/
 	function gradientsPresets(CalcCssString) {
 		return {
 			template: "<div class='preset' style='{{vm.styleStr}}'></div>",
 			restrict: "E",
 			controllerAs: "vm",
 			bindToController: true,
-			controller: function(){},
+			controller: function() {},
 			scope: {
 				presetStyle: "=presetStyle",
 				gradientStyles: "=gradientStyles",
 				gradientType: "=gradientType",
 				onPresetChanged: "&onPresetChanged"
 			},
-			link: function(scope, elem, attr, ctrl) {
-
-				ctrl.styleStr = CalcCssString.getCss(ctrl.gradientStyles, ctrl.gradientType, ctrl.presetStyle);
-
-				elem.on("click", function() {
-					ctrl.onPresetChanged()(ctrl.presetStyle);
-				});
-
-			}
+			link: link
 		};
+	}
+
+	/*@ngInject*/
+	function link(scope, elem, attr, ctrl) {
+
+		ctrl.styleStr = CalcCssString.getCss(ctrl.gradientStyles, ctrl.gradientType, ctrl.presetStyle);
+
+		elem.on("click", function() {
+			ctrl.onPresetChanged()(ctrl.presetStyle);
+		});
 	}
 
 })();
