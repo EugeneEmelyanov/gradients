@@ -9,8 +9,8 @@
 		.module("gradientsApp")
 		.controller("gradients.GradientsCtrl", GradientsController);
 
-		/*jshint latedef:false */
-	function GradientsController($scope, $q, $timeout, stylesService, CalcCssString) {
+	/*jshint latedef:false */
+	function GradientsController($scope, $q, $timeout, gradientsData, CalcCssString) {
 
 		var gradVM = this;
 		gradVM.gradientStops = [];
@@ -20,42 +20,34 @@
 		gradVM.createPreset = createPreset;
 		gradVM.setSelectedPreset = setSelectedPreset;
 
-		$q.all([stylesService.getGradientStyles(),
-			stylesService.getLinearGradientDirections(),
-			stylesService.getRadialGradientPositions(),
-			stylesService.getRadialGradientSizes(),
-			stylesService.getGradientPresets()
-		]).then(function(result) {
-			gradVM.data = {};
-			gradVM.data.gradientStyles = result[0].data.gradientStyles;
-			gradVM.data.linearGradientDirections = result[1].data.linearGradientDirections;
-			gradVM.data.radialGradientPositions = result[2].data.radialGradientPositions;
-			gradVM.data.radialGradientSizes = result[3].data.radialGradientSizes;
-			gradVM.presetItems = result[4].data.presets;
-			angular.copy(gradVM.presetItems[0], gradVM.gradientStops);
+		//gradient styles
+		gradVM.data = {};
+		gradVM.data.gradientStyles = gradientsData[0].data.gradientStyles;
+		gradVM.data.linearGradientDirections = gradientsData[1].data.linearGradientDirections;
+		gradVM.data.radialGradientPositions = gradientsData[2].data.radialGradientPositions;
+		gradVM.data.radialGradientSizes = gradientsData[3].data.radialGradientSizes;
+		gradVM.presetItems = gradientsData[4].data.presets;
+		angular.copy(gradVM.presetItems[0], gradVM.gradientStops);
 
+		//current gradient
+		gradVM.gradient = {};
+		gradVM.gradient.gradientStyle = gradVM.data.gradientStyles[0].name;
+		gradVM.gradient.linearGradientDirection = gradVM.data.linearGradientDirections[0].name;
+		gradVM.gradient.radialGradientPosition = gradVM.data.radialGradientPositions[0].name;
+		gradVM.gradient.radialGradientSize = gradVM.data.radialGradientSizes[0].name;
 
-			gradVM.gradient = {};
-			gradVM.gradient.gradientStyle = gradVM.data.gradientStyles[0].name;
-			gradVM.gradient.linearGradientDirection = gradVM.data.linearGradientDirections[0].name;
-			gradVM.gradient.radialGradientPosition = gradVM.data.radialGradientPositions[0].name;
-			gradVM.gradient.radialGradientSize = gradVM.data.radialGradientSizes[0].name;
-
-			$scope.$watchGroup(["gradVM.gradient.gradientStyle",
-				"gradVM.gradient.linearGradientDirection",
-				"gradVM.gradient.radialGradientPosition",
-				"gradVM.gradient.radialGradientSize"
-			], function() {
-				validateString();
-			});
-
-			$scope.$watch("gradVM.gradientStops", function() {
-				validateString();
-			}, true);
-
-
-
+		$scope.$watchGroup(["gradVM.gradient.gradientStyle",
+			"gradVM.gradient.linearGradientDirection",
+			"gradVM.gradient.radialGradientPosition",
+			"gradVM.gradient.radialGradientSize"
+		], function() {
+			validateString();
 		});
+
+		$scope.$watch("gradVM.gradientStops", function() {
+			validateString();
+		}, true);
+
 
 		function validateString() {
 			gradVM.styleString = CalcCssString.getCss(gradVM.data, gradVM.gradient, gradVM.gradientStops);

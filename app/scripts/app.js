@@ -25,10 +25,22 @@ function config($routeProvider) {
 		.when("/gradient", {
 			templateUrl: "views/gradients.html",
 			controller: "gradients.GradientsCtrl",
-			controllerAs: "gradVM"
+			controllerAs: "gradVM",
+			resolve: {
+				gradientsData: gradientsData
+			}
 		})
 		.when("/", {})
 		.otherwise({
 			redirectTo: "/gradient"
 		});
+
+	function gradientsData($q, stylesService) {
+		return $q.all([stylesService.getGradientStyles(),
+			stylesService.getLinearGradientDirections(),
+			stylesService.getRadialGradientPositions(),
+			stylesService.getRadialGradientSizes(),
+			stylesService.getGradientPresets()
+		]);
+	}
 }

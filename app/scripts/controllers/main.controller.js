@@ -11,15 +11,16 @@
 
 	function MainController($location, CommonServices, $scope) {
 
-		this.message = {};
-		this.pageName = pageName;
-		this.navigateToPath = navigateToPath;
-		this.onSendMessage = onSendMessage;
+		var vm = this;
+		vm.message = {};
+		vm.pageName = pageName;
+		vm.navigateToPath = navigateToPath;
+		vm.onSendMessage = onSendMessage;
 
 		showAngularStats();
 
 		function onSendMessage () {
-			CommonServices.sendMessage(this.message);
+			CommonServices.sendMessage(vm.message);
 		}
 
 		function pageName() {
