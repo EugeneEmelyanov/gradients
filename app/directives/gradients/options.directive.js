@@ -6,7 +6,7 @@
 	"use strict";
 
 	angular
-		.module("directives")
+		.module("gradient-directives")
 		.directive("gradients.options", GradientOptionsDirective);
 
 	/*jshint latedef:false*/
@@ -16,7 +16,7 @@
 			controllerAs: "vm",
 			bindToController: true,
 			controller: GradientOptionsDirectiveController,
-			templateUrl: "./directives/gradient.options.template.html"
+			templateUrl: "./directives/gradients/options.template.html"
 		};
 	}
 

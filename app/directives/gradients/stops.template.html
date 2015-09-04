@@ -1,3 +1,4 @@
+
 <gradients.panel class="gradient_stops" panel-title="Gradient Stops">
 	<div class="row gradient_stops__row">
 		<div class="col-md-2"></div>
@@ -26,13 +27,13 @@
 					<span class="input-group-addon">%</span>
 				</div>
 			</div>
-			<a ng-if="!$last && !$first" href="" ng-click="removeStop(event, $index)" class="btn gradient_stops__icon">
+			<a ng-if="!$last && !$first" href="" ng-click="gradVM.removeStop(event, $index)" class="btn gradient_stops__icon">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
 		</div>
 	</div>
 
-	<a class="btn btn-primary btn-lg" href="" ng-click="addStop(event)">Add Stop</a>
+	<a class="btn btn-primary btn-lg" href="" ng-click="gradVM.addStop(event)">Add Stop</a>
 
 	</div>
 </gradients.panel>

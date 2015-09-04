@@ -2,13 +2,13 @@
 
 	"use strict";
 
-	angular.module("directives")
+	angular.module("gradient-directives")
 		.directive("gradients.presets", gradientsPresets);
 
 	/*jshint latedef:false*/
 	function gradientsPresets() {
 		return {
-			templateUrl: "./directives/gradient.presets.template.html"
+			templateUrl: "./directives/gradients/presets.template.html"
 		};
 	}
 

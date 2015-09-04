@@ -5,10 +5,11 @@
 	"use strict";
 
 	angular
-		.module("directives")
+		.module("gradient-directives")
 		.directive("gradients.preset", gradientsPresets);
 
 	/*jshint latedef:false*/
+	/*@ngInject*/
 	function gradientsPresets(CalcCssString) {
 		return {
 			template: "<div class='preset' style='{{vm.styleStr}}'></div>",
@@ -24,16 +25,17 @@
 			},
 			link: link
 		};
+		/*@ngInject*/
+		function link(scope, elem, attr, ctrl) {
+
+			ctrl.styleStr = CalcCssString.getCss(ctrl.gradientStyles, ctrl.gradientType, ctrl.presetStyle);
+
+			elem.on("click", function() {
+				ctrl.onPresetChanged()(ctrl.presetStyle);
+			});
+		}
 	}
 
-	/*@ngInject*/
-	function link(scope, elem, attr, ctrl) {
 
-		ctrl.styleStr = CalcCssString.getCss(ctrl.gradientStyles, ctrl.gradientType, ctrl.presetStyle);
-
-		elem.on("click", function() {
-			ctrl.onPresetChanged()(ctrl.presetStyle);
-		});
-	}
 
 })();

@@ -5,13 +5,13 @@
 	"use strict";
 
 	angular
-		.module("directives")
+		.module("gradient-directives")
 		.directive("gradients.stops", gradientsStops);
 
 	/*jshint latedef:false*/
 	function gradientsStops() {
 		return {
-			templateUrl: "./directives/gradient.stops.template.html"
+			templateUrl: "./directives/gradients/stops.template.html"
 		};
 	}
 })();

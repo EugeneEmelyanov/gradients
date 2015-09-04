@@ -5,13 +5,13 @@
 	"use strict";
 
 	angular
-		.module("directives")
+		.module("gradient-directives")
 		.directive("gradients.preview", gradientsPreview);
 
 	/*jshint latedef:false*/
 	function gradientsPreview() {
 		return {
-			templateUrl: "./directives/gradient.preview.template.html",
+			templateUrl: "./directives/gradients/preview.template.html",
 			restrict: "E"
 		};
 	}

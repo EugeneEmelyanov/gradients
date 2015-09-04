@@ -16,7 +16,8 @@ angular
 		"ngRoute",
 		"ngSanitize",
 		"ngTouch",
-		"directives"
+		"directives",
+		"gradient-directives"
 	])
 	.config(config);
 /*@ngInject*/
