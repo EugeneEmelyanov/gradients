@@ -17,7 +17,9 @@ angular
 		"ngSanitize",
 		"ngTouch",
 		"directives",
-		"gradient-directives"
+		"services",
+		"gradient-directives",
+		"gradient-services"
 	])
 	.config(config);
 /*@ngInject*/
@@ -36,12 +38,12 @@ function config($routeProvider) {
 			redirectTo: "/gradient"
 		});
 	/*@ngInject*/
-	function gradientsData($q, stylesService) {
-		return $q.all([stylesService.getGradientStyles(),
-			stylesService.getLinearGradientDirections(),
-			stylesService.getRadialGradientPositions(),
-			stylesService.getRadialGradientSizes(),
-			stylesService.getGradientPresets()
+	function gradientsData($q, gradientDataService) {
+		return $q.all([gradientDataService.getGradientStyles(),
+			gradientDataService.getLinearGradientDirections(),
+			gradientDataService.getRadialGradientPositions(),
+			gradientDataService.getRadialGradientSizes(),
+			gradientDataService.getGradientPresets()
 		]);
 	}
 }

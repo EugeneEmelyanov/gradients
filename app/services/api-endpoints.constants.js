@@ -1,10 +1,12 @@
 "use strict";
 
-(function () {
+(function() {
 	angular
-			.module("gradientsApp")
-			.factory("API", API);
+		.module("gradientsApp")
+		.factory("API", API);
 
+	/*jshint latedef:false*/
+	/*@ngInject*/
 	function API(config) {
 		return {
 			"GRADIENT_STYLES": config.baseUrl + "/api/v1/gradientstyles",
@@ -15,6 +17,6 @@
 			"GRADIENT_PRESETS_CREATE": config.baseUrl + "/api/v1/presets",
 			"CSS_TEMPLATE": "./resources/csstemplate",
 			"SEND_EMAIL": config.baseUrl + "/api/v1/email"
-		}
+		};
 	}
 })();

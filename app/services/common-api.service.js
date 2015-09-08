@@ -4,16 +4,18 @@
 
 "use strict";
 
-(function () {
+(function() {
 	angular
-			.module("gradientsApp")
-			.factory("CommonServices", CommonServices);
+		.module("gradientsApp")
+		.factory("CommonServices", CommonServices);
 
+	/*jshint latedef:false*/
+	/*@ngInject*/
 	function CommonServices($http, API) {
 		return {
-			sendMessage: function (message) {
+			sendMessage: function(message) {
 				return $http.post(API.SEND_EMAIL, message);
 			}
-		}
+		};
 	}
-})()
+})();

@@ -2,8 +2,8 @@
 
 (function () {
 	angular
-			.module("gradientsApp")
-			.factory("stylesService", StylesService);
+			.module("gradient-services")
+			.factory("gradientDataService", StylesService);
 
 	function StylesService($http, API) {
 

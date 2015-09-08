@@ -11,7 +11,7 @@
 
 	/*jshint latedef:false */
 	/*@ngInject*/
-	function GradientsController($scope, $q, $timeout, gradientsData, CalcCssString) {
+	function GradientsController($scope, $q, $timeout, gradientsData, CalcCssString, gradientDataService) {
 
 		var gradVM = this;
 		gradVM.gradientStops = [];
@@ -77,10 +77,12 @@
 
 		function createPreset() {
 			var preset = gradVM.gradientStops;
-			stylesService.createPreset({
+			gradientDataService.createPreset({
 				preset: preset
 			}).then(function(res) {
-				//TODO: write handler
+				$scope.$emit("gradients.showPopup", res.data);
+			}, function(err) {
+				$scope.$emit("gradients.showPopup", err);
 			});
 		}
 
