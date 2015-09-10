@@ -30,7 +30,7 @@
     <!-- vendor -->
 </head>
 
-<body id="mainBodyContainer" ng-controller="gradients.MainController as main">
+<body id="mainBodyContainer" ng-controller="gradients.MainController as main" wow>
     <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
 	your browser</a> to improve your experience.</p>
@@ -40,7 +40,7 @@
         <div id="status"></div>
     </div>
     <!-- Navigation start -->
-    <header class="header">
+    <header sticky-element="0" class="header">
         <nav class="navbar navbar-custom" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -376,6 +376,7 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/gradients.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="scripts/apprun.js"></script>
     <!--controllers-->
     <script src="scripts/controllers/gradient.controller.js"></script>
     <script src="scripts/controllers/main.controller.js"></script>
@@ -387,6 +388,8 @@
     <script src="directives/panel.directive.js"></script>
     <script src="directives/buttonbar.directive.js"></script>
     <script src="directives/colorpicker.directive.js"></script>
+    <script src="directives/stickyelement.directive.js"></script>
+    <script src="directives/wow.directive.js"></script>
     <!-- gradient directives-->
     <script src="directives/gradients/directives.js"></script>
     <script src="directives/gradients/options.directive.js"></script>
