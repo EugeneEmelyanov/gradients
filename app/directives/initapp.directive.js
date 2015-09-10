@@ -6,7 +6,7 @@
 		.directive("initApp", initApplication);
 
 	/*jshint latedef:false*/
-	function initApplication($window) {
+	function initApplication($window, $timeout) {
 		/* ---------------------------------------------- /*
 		 * Home BG
 		/* ---------------------------------------------- */
@@ -14,9 +14,13 @@
 			restrict: "A",
 			link: function(scope, elem, attrs) {
 				var e = $(elem);
-				$(".screen-height").height($window.height());
-				$window.resize(function() {
-					$(".screen-height").height($(window).height());
+				var home = $("#home");
+				var w = $($window);
+				$timeout(function() {
+					$(".screen-height").height(w.height());
+				});
+				w.resize(function() {
+					$(".screen-height").height(w.height());
 				});
 
 				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
