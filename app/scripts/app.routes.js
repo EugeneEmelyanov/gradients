@@ -8,7 +8,7 @@
 	/*@ngInject*/
 	function config($routeProvider) {
 		$routeProvider
-			.when("/gradient", {
+			.when("/nav-gradient", {
 				templateUrl: "views/gradients.html",
 				controller: "gradients.GradientsCtrl",
 				controllerAs: "gradVM",
@@ -17,9 +17,8 @@
 				}
 			})
 			.when("/", {})
-			.otherwise({
-				redirectTo: "/gradient"
-			});
+			.when("/home", {})
+			.when("/services", {});
 		/*@ngInject*/
 		function gradientsData($q, gradientDataService) {
 			return $q.all([gradientDataService.getGradientStyles(),

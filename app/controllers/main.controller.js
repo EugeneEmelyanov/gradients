@@ -9,7 +9,7 @@
 		.module("gradientsApp")
 		.controller('gradients.MainController', MainController);
 
-	function MainController($location, CommonServices, $scope, ModalService) {
+	function MainController($location, CommonServices, $scope, ModalService, $timeout) {
 
 		var vm = this;
 		vm.message = {};
@@ -48,7 +48,7 @@
 		}
 
 		function onSendMessage() {
-			CommonServices.sendMessage(vm.message).then(function(success){
+			CommonServices.sendMessage(vm.message).then(function(success) {
 				vm.showModal("Inquirie delivered", "Thank you for your message. I'll get back to you shortly");
 			}, function(err) {
 				vm.showModal("Sorry, something went wrong.", "Please, drop me an email to eugene.v.emelyanov at gmail.com");
@@ -56,31 +56,42 @@
 		}
 
 		function pageName() {
-			return $location.path();
+			var path = $location.path();
+			if (path.indexOf("nav") == -1) {
+				path = "/";
+			}
+			return path;
 		}
 
 		function navigateToPath(path, anc_id) {
-			if (path === "/") {
-				if ($location.path() !== path) {
-					var listener = $scope.$root.$on("$locationChangeSuccess", function() {
-						scrollToAcnhor();
-						listener();
-					});
-				} else {
-					scrollToAcnhor();
-				}
-			} else {
-				anc_id = "#mainBodyContainer";
-				scrollToAcnhor();
-			}
+
+			anc_id = "#mainBodyContainer";
+			scrollToAnchor(anc_id);
 
 			$location.path(path);
+		}
 
-			function scrollToAcnhor() {
-				$('html, body').stop().animate({
-					scrollTop: $(anc_id).offset().top
-				}, 1000);
+		$timeout(function() {
+			$("a[href*=#]").on("click", scrollToAnchor);
+		});
+
+		function scrollToAnchor(evt) {
+
+			var anc_id = evt;
+			if (typeof evt.target !== "undefined") {
+				anc_id = $(evt.target).attr('href');
 			}
+			if (anc_id === "#") return;
+			if (typeof $(anc_id).offset() === "undefined") {
+				var listener = $scope.$root.$on("$locationChangeSuccess", function() {
+					scrollToAnchor(evt);
+					listener();
+				});
+				return;
+			}
+			$('html, body').stop().animate({
+				scrollTop: $(anc_id).offset().top
+			}, 1000);
 		}
 	}
 })();

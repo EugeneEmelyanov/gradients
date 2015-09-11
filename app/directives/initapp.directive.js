@@ -1,12 +1,16 @@
 (function() {
 	"use strict";
 
+	/**
+	 * Will contain all the jquery plugins initialization for now.
+	 * TODO: refactor this to have plugin per directive.
+	 */
 	angular
 		.module("directives")
 		.directive("initApp", initApplication);
 
 	/*jshint latedef:false*/
-	function initApplication($window, $timeout) {
+	function initApplication($window, $timeout, $log, $rootScope) {
 		/* ---------------------------------------------- /*
 		 * Home BG
 		/* ---------------------------------------------- */
@@ -14,13 +18,17 @@
 			restrict: "A",
 			link: function(scope, elem, attrs) {
 				var e = $(elem);
-				var home = $("#home");
 				var w = $($window);
 				$timeout(function() {
-					$(".screen-height").height(w.height());
+					resizeScreen();					
 				});
+
 				w.resize(function() {
-					$(".screen-height").height(w.height());
+					resizeScreen();
+				});
+
+				$rootScope.$on("$routeChangeSuccess", function() {
+					resizeScreen();
 				});
 
 				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
@@ -29,6 +37,35 @@
 					});
 				} else {
 					$('#home').parallax('50%', 0.1);
+				}
+
+				w.scroll(function() {
+					if ($(this).scrollTop() > 100) {
+						$(".scroll-up").fadeIn();
+					} else {
+						$(".scroll-up").fadeOut();
+					}
+				});
+
+
+				$('.skills').waypoint(function() {
+					$('.chart').each(function() {
+						$(this).easyPieChart({
+							size: 140,
+							animate: 2000,
+							lineCap: 'butt',
+							scaleColor: false,
+							barColor: '#FF5252',
+							trackColor: 'transparent',
+							lineWidth: 10
+						});
+					});
+				}, {
+					offset: '80%'
+				});
+
+				function resizeScreen()	{
+					$(".screen-height").height(w.height());
 				}
 			}
 		};

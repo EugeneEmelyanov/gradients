@@ -30,7 +30,13 @@
     <!-- vendor -->
 </head>
 
-<body id="mainBodyContainer" ng-controller="gradients.MainController as main" wow init-app>
+<body id="mainBodyContainer" 
+        ng-controller="gradients.MainController as main" 
+        wow 
+        init-app
+        data-spy="scroll"
+        data-target=".navbar-custom"
+        data-offset="70">
     <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
 	your browser</a> to improve your experience.</p>
@@ -40,7 +46,7 @@
         <div id="status"></div>
     </div>
     <!-- Navigation start -->
-    <header sticky-element="0" class="header">
+    <header   class="header" data-spy="affix">
         <nav class="navbar navbar-custom" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -54,21 +60,20 @@
                 </div>
                 <div class="collapse navbar-collapse" id="custom-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href ng-click="main.navigateToPath('/', '#home')">Home</a></li>
-                        <li><a href ng-click="main.navigateToPath('/', '#services')">Services</a></li>
-                        <li><a href ng-click="main.navigateToPath('/', '#portfolio')">Works</a></li>
-                        <li><a href ng-click="main.navigateToPath('/', '#contact')">Contact</a></li>
-                      
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Works</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li>
+                            <div class="dropdown" style="padding:15px;font-size:11px;letter-spacing:3px;">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">PlayGround</a>
+                                <ul class="dropdown-menu" role="menu" arial-labelby="dLabel">
+                                    <li><a href ng-click="main.navigateToPath('/nav-gradient')">CSS Gradients</a></li>
+                                    <li><a href="#">Second Item</a>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>   
-                    <div style="clear:both;" class="nav navbar-right navbar-nav">
-                        <div style="float:right;">
-                            <span>My playground projects:</span>
-                            <ul style="display:inline-block; list-style:none;">
-                                  <li><a href ng-click="main.navigateToPath('/gradient')">CSS Gradients</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
                 </div>
             </div>
             <!-- .container -->
@@ -330,7 +335,6 @@
     <script src="bower_components/eventEmitter/EventEmitter.js"></script>
     <script src="bower_components/eventie/eventie.js"></script>
     <script src="bower_components/imagesloaded/imagesloaded.js"></script>
-    <script src="bower_components/jquery-sticky/jquery.sticky.js"></script>
     <script src="bower_components/jquery-smooth-scroll/jquery.smooth-scroll.js"></script>
     <script src="bower_components/wow/dist/wow.js"></script>
     <script src="bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
@@ -354,7 +358,6 @@
     <script src="directives/panel.directive.js"></script>
     <script src="directives/buttonbar.directive.js"></script>
     <script src="directives/colorpicker.directive.js"></script>
-    <script src="directives/stickyelement.directive.js"></script>
     <script src="directives/wow.directive.js"></script>
     <script src="directives/initapp.directive.js"></script>
     <!-- gradient directives-->
@@ -375,7 +378,6 @@
     <script src="services/gradient/gradient-api.service.js"></script>
     <script src="services/gradient/style-calculation.service.js"></script>
     <!-- endbuild -->
-    <script src="js/custom.js"></script>
 </body>
 
 </html>
