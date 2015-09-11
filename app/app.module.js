@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-	.module("gradientsApp", [
+	.module("app", [
 		"ngAnimate",
 		"ngCookies",
 		"ngResource",

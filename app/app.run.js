@@ -2,13 +2,13 @@
 	"use strict";
 
 	angular
-		.module("gradientsApp")
+		.module("app")
 		.run(runFunction);
-	/*jshing latedef:false*/
+	/*jshint latedef:false*/
 	function runFunction($window) {
 		$window.onload = function() {
 			$("#status").fadeOut();
-			$("#preloader").delay(300).fadeOut('slow');
+			$("#preloader").delay(300).fadeOut("slow");
 		};
 	}
 })();

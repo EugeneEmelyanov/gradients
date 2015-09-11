@@ -2,7 +2,7 @@
 	"use strict";
 
 	angular
-		.module("gradientsApp")
+		.module("app")
 		.config(config);
 
 	/*@ngInject*/
