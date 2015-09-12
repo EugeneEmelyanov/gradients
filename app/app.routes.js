@@ -9,7 +9,7 @@
 	function config($routeProvider) {
 		$routeProvider
 			.when("/nav-gradient", {
-				templateUrl: "views/gradients.html",
+				templateUrl: "components/gradients/gradients.html",
 				controller: "gradients.GradientsCtrl",
 				controllerAs: "gradVM",
 				resolve: {

@@ -6,7 +6,7 @@
 (function() {
 
 	angular
-		.module("gradientsApp")
+		.module("core")
 		.controller('gradients.MainController', MainController);
 
 	function MainController($location, CommonServices, $scope, ModalService, $timeout) {
@@ -29,7 +29,7 @@
 		function showModal(title, body) {
 			// Just provide a template url, a controller and call 'showModal'.
 			ModalService.showModal({
-				templateUrl: "./directives/popup.template.html",
+				templateUrl: "./components/core/popup/popup.template.html",
 				controller: "PopupController",
 				controllerAs: "vm",
 				inputs: {

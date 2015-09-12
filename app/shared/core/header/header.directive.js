@@ -6,7 +6,7 @@
 	"use strict";
 
 	angular
-		.module("directives")
+		.module("core-directives")
 		.directive("gradients.header", header);
 
 	/*jshint latedef:false*/
@@ -14,7 +14,7 @@
 		return {
 			restrict: "E",
 			replace: true,
-			templateUrl: "./directives/header.template.html"
+			templateUrl: "./shared/core/header/header.template.html"
 		};
 	}
 })();

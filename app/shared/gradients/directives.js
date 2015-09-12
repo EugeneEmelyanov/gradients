@@ -2,5 +2,5 @@
 	"use strict";
 
 	angular
-	.module("gradient-directives", ["directives"]);
+		.module("gradient-directives", []);
 })();

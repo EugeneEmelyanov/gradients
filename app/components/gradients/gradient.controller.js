@@ -6,7 +6,7 @@
 (function() {
 
 	angular
-		.module("gradientsApp")
+		.module("gradients")
 		.controller("gradients.GradientsCtrl", GradientsController);
 
 	/*jshint latedef:false */

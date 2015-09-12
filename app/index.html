@@ -335,6 +335,7 @@
     <script src="bower_components/eventEmitter/EventEmitter.js"></script>
     <script src="bower_components/eventie/eventie.js"></script>
     <script src="bower_components/imagesloaded/imagesloaded.js"></script>
+    <script src="bower_components/jquery-sticky/jquery.sticky.js"></script>
     <script src="bower_components/jquery-smooth-scroll/jquery.smooth-scroll.js"></script>
     <script src="bower_components/wow/dist/wow.js"></script>
     <script src="bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
@@ -343,40 +344,43 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="app.bootstrap.js"></script>
+    
+    <!--core components-->
+    <script src="components/core/core.js"></script>
+    <script src="components/core/main.controller.js"></script>
+    <script src="components/core/api.endpoints.constants.js"></script>
+    <script src="components/core/common.api.service.js"></script>
+    <script src="components/core/popup/popup.js"></script>
+    <script src="components/core/popup/popup.controller.js"></script>
+    <script src="components/core/popup/modal.service.js"></script>
+    <!--gradient components -->
+    <script src="components/gradients/gradients.js"></script>
+    <script src="components/gradients/gradient.controller.js"></script>
+    <script src="components/gradients/gradientapi.service.js"></script>
+    <script src="components/gradients/stylecalculation.service.js"></script>
+    <!--shared directives-->
+    <script src="shared/core/directives.js"></script>
+    <script src="shared/core/footer/footer.directive.js"></script>
+    <script src="shared/core/header/header.directive.js"></script>
+    <script src="shared/core/panel/panel.directive.js"></script>
+    <script src="shared/core/buttonbar/buttonbar.directive.js"></script>
+    <script src="shared/core/jquerywrappers/colorpicker.directive.js"></script>
+    <script src="shared/core/jquerywrappers/wow.directive.js"></script>
+    <script src="shared/core/jquerywrappers/initapp.directive.js"></script>
+    <!-- gradient directives-->
+    <script src="shared/gradients/directives.js"></script>
+    <script src="shared/gradients/options/options.directive.js"></script>
+    <script src="shared/gradients/preview/preview.directive.js"></script>
+    <script src="shared/gradients/stops/stops.directive.js"></script>
+    <script src="shared/gradients/presets/presets.directive.js"></script>
+    <script src="shared/gradients/presets/preset.directive.js"></script>
+    <script src="shared/gradients/markup/markup.directive.js"></script>
+    <!--app -->
+  
+   <script src="app.bootstrap.js"></script>
     <script src="app.module.js"></script>
     <script src="app.routes.js"></script>
     <script src="app.run.js"></script>
-    <!--controllers-->
-    <script src="components/gradients/gradient.controller.js"></script>
-    <script src="components/core/main.controller.js"></script>
-    <script src="components/core/popup.controller.js"></script>
-    <!--common directives-->
-    <script src="directives/directives.js"></script>
-    <script src="directives/footer.directive.js"></script>
-    <script src="directives/header.directive.js"></script>
-    <script src="directives/panel.directive.js"></script>
-    <script src="directives/buttonbar.directive.js"></script>
-    <script src="directives/colorpicker.directive.js"></script>
-    <script src="directives/wow.directive.js"></script>
-    <script src="directives/initapp.directive.js"></script>
-    <!-- gradient directives-->
-    <script src="directives/gradients/directives.js"></script>
-    <script src="directives/gradients/options.directive.js"></script>
-    <script src="directives/gradients/preview.directive.js"></script>
-    <script src="directives/gradients/stops.directive.js"></script>
-    <script src="directives/gradients/presets.directive.js"></script>
-    <script src="directives/gradients/preset.directive.js"></script>
-    <script src="directives/gradients/markup.directive.js"></script>
-    <!--services -->
-    <script src="services/services.js"></script>
-    <script src="services/api-endpoints.constants.js"></script>
-    <script src="services/common-api.service.js"></script>
-    <script src="services/modal.service.js"></script>
-    <!-- gradient service -->
-    <script src="services/gradient/services.js"></script>
-    <script src="services/gradient/gradient-api.service.js"></script>
-    <script src="services/gradient/style-calculation.service.js"></script>
     <!-- endbuild -->
 </body>
 

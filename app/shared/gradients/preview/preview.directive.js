@@ -11,7 +11,7 @@
 	/*jshint latedef:false*/
 	function gradientsPreview() {
 		return {
-			templateUrl: "./directives/gradients/preview.template.html",
+			templateUrl: "./shared/gradients/preview/preview.template.html",
 			restrict: "E"
 		};
 	}

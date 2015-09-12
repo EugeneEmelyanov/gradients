@@ -11,7 +11,7 @@
 	/*jshint latedef:false*/
 	function gradientsStops() {
 		return {
-			templateUrl: "./directives/gradients/stops.template.html"
+			templateUrl: "./shared/gradients/stops/stops.template.html"
 		};
 	}
 })();

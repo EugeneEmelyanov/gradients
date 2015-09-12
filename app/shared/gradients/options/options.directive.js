@@ -16,7 +16,7 @@
 			controllerAs: "vm",
 			bindToController: true,
 			controller: GradientOptionsDirectiveController,
-			templateUrl: "./directives/gradients/options.template.html"
+			templateUrl: "./shared/gradients/options/options.template.html"
 		};
 	}
 

@@ -5,7 +5,7 @@
 	"use strict";
 
 	angular
-		.module("directives")
+		.module("core-directives")
 		.directive("gradients.footer", footer);
 
 	/*jshint latedef:false*/
@@ -13,7 +13,7 @@
 		return {
 			restrict: "E",
 			replace: true,
-			templateUrl: "./directives/footer.template.html"
+			templateUrl: "./shared/core/footer/footer.template.html"
 		};
 	}
 })();

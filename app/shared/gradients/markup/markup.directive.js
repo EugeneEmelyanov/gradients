@@ -9,7 +9,7 @@
 	/*jshint latedef:false */
 	function gradientsMarkup() {
 		return {
-			templateUrl: "./directives/gradients/markup.template.html"
+			templateUrl: "./shared/gradients/markup/markup.template.html"
 		};
 	}
 

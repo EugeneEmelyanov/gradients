@@ -6,7 +6,7 @@
 	"use strict";
 
 	angular
-		.module("directives")
+		.module("core-directives")
 		.directive("gradients.panel", gradientsPanel);
 
 	/*jshint latedef:false*/
@@ -14,7 +14,7 @@
 		return {
 			restrict: "E",
 			transclude: true,
-			templateUrl: "./directives/panel.template.html",
+			templateUrl: "./shared/core/panel/panel.template.html",
 			scope: {
 				"panelTitle": "@panelTitle"
 			}

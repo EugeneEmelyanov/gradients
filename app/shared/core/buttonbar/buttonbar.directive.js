@@ -5,13 +5,13 @@
 	"use strict";
 
 	angular
-		.module("directives")
+		.module("core-directives")
 		.directive("gradients.buttonbar", ButtonBar);
 
 	/*jshint latedef:false*/
 	function ButtonBar() {
 		return {
-			templateUrl: "./directives/buttonbar.template.html",
+			templateUrl: "./shared/core/buttonbar/buttonbar.template.html",
 			scope: {
 				dataprovider: "=dataprovider",
 				selectedItemChange: "&selectedItemChange"

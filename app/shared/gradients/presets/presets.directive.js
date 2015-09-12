@@ -8,7 +8,7 @@
 	/*jshint latedef:false*/
 	function gradientsPresets() {
 		return {
-			templateUrl: "./directives/gradients/presets.template.html"
+			templateUrl: "./shared/gradients/presets/presets.template.html"
 		};
 	}
 
