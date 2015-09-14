@@ -7,7 +7,7 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
@@ -72,7 +72,7 @@ module.exports = function (grunt) {
       livereload: {
         options: {
           open: true,
-          middleware: function (connect) {
+          middleware: function(connect) {
             return [
               connect.static('.tmp'),
               connect().use(
@@ -91,7 +91,7 @@ module.exports = function (grunt) {
       test: {
         options: {
           port: 9001,
-          middleware: function (connect) {
+          middleware: function(connect) {
             return [
               connect.static('.tmp'),
               connect.static('test'),
@@ -177,7 +177,7 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
-        ignorePath:  /\.\.\//
+        ignorePath: /\.\.\//
       },
       sass: {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{styl}'],
@@ -189,12 +189,16 @@ module.exports = function (grunt) {
     },
 
     // Compiles Sass to CSS and generates necessary files if requested
-      stylus: {
-          dist: {
-              files: { "<%= yeoman.app %>/styles/main.css": ["<%= yeoman.app %>/styles/*.styl"] },
-              options: { compress: false }
-          }
-      },
+    stylus: {
+      dist: {
+        files: {
+          "<%= yeoman.app %>/styles/main.css": ["<%= yeoman.app %>/styles/*.styl"]
+        },
+        options: {
+          compress: false
+        }
+      }
+    },
 
     // Renames files for browser caching purposes
     filerev: {
@@ -244,13 +248,13 @@ module.exports = function (grunt) {
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
     cssmin: {
-       dist: {
-         files: {
-           '<%= yeoman.dist %>/styles/main.css': [
-             '.tmp/styles/{,*/}*.css'
-           ]
-         }
-       }
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/styles/main.css': [
+            '.tmp/styles/{,*/}*.css'
+          ]
+        }
+      }
     },
     // uglify: {
     //   dist: {
@@ -337,16 +341,23 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
-			'directives/{,*/}*.html',
-            'views/{,*/}*.html',
-            'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*',
-            'styles/images/{,*}*.*',
+            'components/{,*/,*/*/}*.html',
+            'shared/{,*/,*/*/}*.html',
             'styles/rewrite/{,*}*.*',
             'styles/vendor/{,*}*.*',
             'js/*',
             'resources/*'
           ]
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>/styles/images',
+          dest: '<%= yeoman.dist %>/images',
+          src: './*',
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>/styles/fonts',
+          dest: '<%= yeoman.dist %>/fonts',
+          src: './*',
         }, {
           expand: true,
           cwd: '.tmp/images',
@@ -389,7 +400,7 @@ module.exports = function (grunt) {
   });
 
 
-  grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
+  grunt.registerTask('serve', 'Compile then start a connect web server', function(target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
@@ -404,7 +415,7 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
+  grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function(target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve:' + target]);
   });
@@ -417,7 +428,7 @@ module.exports = function (grunt) {
     'autoprefixer',
     'concat',
     'ngAnnotate',
-	'copy:styles',
+    'copy:styles',
     'copy:dist',
     'cdnify',
     'cssmin',
