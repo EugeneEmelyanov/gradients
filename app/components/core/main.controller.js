@@ -9,7 +9,7 @@
 		.module("core")
 		.controller('gradients.MainController', MainController);
 
-	function MainController($location, CommonServices, $scope, ModalService, $timeout) {
+	function MainController($location, $timeout, CommonServices, $scope, ModalService, WakeOpenShift) {
 
 		var vm = this;
 		vm.message = {};
@@ -18,6 +18,8 @@
 		vm.onSendMessage = onSendMessage;
 		vm.showModal = showModal;
 
+		init();
+
 		$scope.$on("gradients.showPopup", function(evt, data) {
 			vm.showModal("Preset created.", "Thank you for your preset. It will be available in our presets library.");
 		});
@@ -25,6 +27,14 @@
 		showAngularStats({
 			position: "topright"
 		});
+
+		function init() {
+			WakeOpenShift.wakeOpenShift().then(function(){
+				console.log("Open Shift available.")
+			}, function(err){
+				console.log("Open Shift will wake up soon.")
+			});
+		};
 
 		function showModal(title, body) {
 			// Just provide a template url, a controller and call 'showModal'.

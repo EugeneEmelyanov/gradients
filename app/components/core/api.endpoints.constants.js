@@ -16,7 +16,8 @@
 			"GRADIENT_PRESETS": config.baseUrl + "/api/v1/presets",
 			"GRADIENT_PRESETS_CREATE": config.baseUrl + "/api/v1/presets",
 			"CSS_TEMPLATE": "./resources/csstemplate",
-			"SEND_EMAIL": config.baseUrl + "/api/v1/email"
+			"SEND_EMAIL": config.baseUrl + "/api/v1/email",
+			"PING_OPENSHIFT": config.baseUrl + "/api/v1/ping"
 		};
 	}
 })();
