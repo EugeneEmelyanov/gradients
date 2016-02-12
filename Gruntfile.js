@@ -345,6 +345,7 @@ module.exports = function(grunt) {
             'shared/{,*/,*/*/}*.html',
             'styles/rewrite/{,*}*.*',
             'styles/vendor/{,*}*.*',
+			'styles/unversioned/{,*}*.*',
             'js/*',
             'resources/*'
           ]

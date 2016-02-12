@@ -75,7 +75,7 @@
 
 		function navigateToPath(path, anc_id) {
 
-			anc_id = "#mainBodyContainer";
+			anc_id = anc_id || "#mainBodyContainer";
 			scrollToAnchor(anc_id);
 
 			$location.path(path);
