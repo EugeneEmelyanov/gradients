@@ -867,6 +867,7 @@ figure.effect-bubba figcaption::after {
 }
 
 figure.effect-bubba h2 {
+	display: none;
 	padding-top: 10%;
 	font-weight: bold;
 	-webkit-transition: -webkit-transform 0.35s;
@@ -874,6 +875,10 @@ figure.effect-bubba h2 {
 	-webkit-transform: translate3d(0,-20px,0);
 	transform: translate3d(0,-20px,0);
     color: #fff;
+}
+
+figure.effect-bubba:hover h2 {
+	display: block;
 }
 
 figure.effect-bubba p {
